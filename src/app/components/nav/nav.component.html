@@ -1,13 +1,16 @@
 <div class="nav-container">
   <div class="nav">
-    <div class="nav-left nav-items">
-      <h1 title="Home">Home</h1>
-      <h1 title="band">Band</h1>
-    </div>
-    <div></div>
-    <div class="nav-right nav-items">
-      <h1  title="Shows">Shows</h1>
-      <h1  title="Contact">Contact</h1>
+    <div class="nav-items">
+      <div class="nav-item"  *ngFor="let menuItem of menuItems">
+        <h1
+
+          [ngClass]="{'active': activeClass === menuItem}"
+          [title]="menuItem"
+          (click)="setActiveClass(menuItem)"
+        >
+          {{menuItem}}
+        </h1>
+      </div>
     </div>
   </div>
   <div class="logo">

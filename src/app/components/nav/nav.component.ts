@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
+  activeClass: string = "home";
+  menuItems: string[] = ['home', 'band', ' ', 'shows', 'contact'];
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setActiveClass(menuItem: string){
+    this.activeClass = menuItem;
+  }
 }
