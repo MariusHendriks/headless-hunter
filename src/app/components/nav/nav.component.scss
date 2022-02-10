@@ -54,9 +54,12 @@ $logoWidth: 150px;
           }
         }
         .active{
+          -webkit-animation: glow 8s ease-in-out infinite alternate;
+          -moz-animation: glow 8s ease-in-out infinite alternate;
+          animation: glow 8s ease-in-out infinite alternate;
           color: #fff;
           &:before, &:after {
-            color: rgba(0,0,0,.1);
+            display: none;
           }
         }
       }
@@ -84,5 +87,7 @@ $logoWidth: 150px;
     margin-top: -3px;
   }
 }
+
+
 
 
