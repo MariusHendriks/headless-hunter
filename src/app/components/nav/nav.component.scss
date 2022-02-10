@@ -1,8 +1,10 @@
 @import "/src/styles/styles";
 
 $angle: 15px; //Angle in %
+$logoWidth: 150px;
 
 .nav-container{
+  height:65px;
   display: flex;
   justify-content: center;
   .nav{
@@ -12,20 +14,53 @@ $angle: 15px; //Angle in %
     text-transform: uppercase;
     background-color: $black;
     width: 80%;
+    height: 100%;
     padding: 0 50px;
-    h1{
-      color: white;
-    }
+
     .nav-items{
       font-family: Montserrat;
       font-weight: 900;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 35%;
-    }
-    .nav-center{
-      width: 30%;
+
+      h1 {
+        display: block;
+        padding: 50px;
+        color: white;
+        position: relative;
+        &:before, &:after {
+          content: attr(title);
+          padding: 50px;
+          color: rgba(0,0,0,.1);
+          position: absolute;
+        }
+        &:before { top: 0.5px; left: 0.5px };
+        &:after  { top: 1px; left: 1px }
+      }
     }
   }
 }
+.logo{
+  position: fixed;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-top: -25px;
+  img{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .logo-orange{
+    transform: rotate(1deg);
+    width: 180px;
+    margin-top: -15px;
+  }
+  .background{
+    width: 175px;
+    margin-top: -3px;
+  }
+}
+
 
