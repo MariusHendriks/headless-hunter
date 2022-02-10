@@ -1,0 +1,31 @@
+@import "/src/styles/styles";
+
+$angle: 15px; //Angle in %
+
+.nav-container{
+  display: flex;
+  justify-content: center;
+  .nav{
+    clip-path: polygon(0 0, 100% 0, calc(100% - #{$angle}) 100%, calc(0% + #{$angle}) 100%);
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: $black;
+    width: 80%;
+    padding: 0 50px;
+    h1{
+      color: white;
+    }
+    .nav-items{
+      font-family: Montserrat;
+      font-weight: 900;
+      display: flex;
+      justify-content: space-between;
+      width: 35%;
+    }
+    .nav-center{
+      width: 30%;
+    }
+  }
+}
+
