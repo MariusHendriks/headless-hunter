@@ -6,7 +6,7 @@ $wrapperWidth: 1200px;
 $black: #232323;
 $black-lighter: #2E2E2E;
 
-$filter-shadow: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+$filter-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
 
 *{
   margin: 0;
@@ -15,5 +15,9 @@ $filter-shadow: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 
 body{
   //background-color: $black-lighter;
+  overflow-y:scroll;
+  overflow-x: hidden;
+  min-height: 100vh;
   background-color: white;
+  padding-bottom: 100px;
 }
