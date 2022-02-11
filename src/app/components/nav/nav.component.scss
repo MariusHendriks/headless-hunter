@@ -13,13 +13,12 @@ $navWidth: 80vw;
   display: flex;
   width: 100%;
   max-width: $wrapperWidth;
-  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+  filter: $filter-shadow;
   justify-content: center;
   .nav{
     position: relative;
     clip-path: polygon(0 0, 100% 0, calc(100% - #{$angle}) 100%, calc(0% + #{$angle}) 100%);
     display: flex;
-
     justify-content: space-between;
     text-transform: uppercase;
     background-color: $black;
