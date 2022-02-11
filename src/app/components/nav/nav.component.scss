@@ -2,19 +2,24 @@
 @import "../../../styles/animations/glow";
 
 $angle: 15px; //Angle in %
-$logoWidth: 150px;
+$logoWidth: 160px;
+$navWidth: 80vw;
 
 .nav-container{
-  height:65px;
+  height:64px;
+  position: fixed;
+  top: 0;
   display: flex;
+  width: 100%;
   justify-content: center;
   .nav{
+    position: relative;
     clip-path: polygon(0 0, 100% 0, calc(100% - #{$angle}) 100%, calc(0% + #{$angle}) 100%);
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
     background-color: $black;
-    width: 80%;
+    width: $navWidth;
     height: 100%;
     padding: 0 50px;
     .nav-items{
@@ -72,18 +77,18 @@ $logoWidth: 150px;
   display: grid;
   align-items: center;
   justify-items: center;
-  margin-top: -25px;
+  margin-top: -15px;
   img{
     grid-column: 1;
     grid-row: 1;
   }
   .logo-orange{
     transform: rotate(1deg);
-    width: 180px;
+    width: $logoWidth;
     margin-top: -15px;
   }
   .background{
-    width: 175px;
+    width: calc(#{$logoWidth} - 5px);
     margin-top: -3px;
   }
 }
