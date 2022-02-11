@@ -1,7 +1,17 @@
+$cloudSpeed1: 6s;
+$cloudSpeed2: 80s;
+
+
+.home{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/assets/img/home_cover.png");
+  background-size: cover;
+  background-position: center;
+}
 .home-image{
     width: 100vw;
 }
-
 
 .fogwrapper {
   z-index: 0;
@@ -9,8 +19,8 @@
   position: absolute;
   top: 0;
   width: 100%;
-  //-webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
-  //filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  -webkit-filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
+  filter: blur(1px) grayscale(0.2) saturate(1.2) sepia(0.2);
 }
 #foglayer_01, #foglayer_02, #foglayer_03 {
   height: 100%;
@@ -25,23 +35,16 @@
   width: 50%;
 }
 #foglayer_01 {
-  -webkit-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
-  -moz-animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
-  animation: foglayer_01_opacity 10s linear infinite, foglayer_moveme 15s linear infinite;
+  -webkit-animation: foglayer_01_opacity $cloudSpeed1 linear infinite, foglayer_moveme calc(#{$cloudSpeed1} + 5s) linear infinite;
+  -moz-animation: foglayer_01_opacity $cloudSpeed1 linear infinite, foglayer_moveme calc(#{$cloudSpeed1} + 5s) linear infinite;
+  animation: foglayer_01_opacity $cloudSpeed1 linear infinite, foglayer_moveme calc(#{$cloudSpeed1} + 5s) linear infinite;
 }
 #foglayer_02, #foglayer_03 {
-  -webkit-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
-  -moz-animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
-  animation: foglayer_02_opacity 21s linear infinite, foglayer_moveme 13s linear infinite;
+  -webkit-animation: foglayer_02_opacity $cloudSpeed2 linear infinite, foglayer_moveme calc(#{$cloudSpeed2} / 2) linear infinite;
+  -moz-animation: foglayer_02_opacity $cloudSpeed2 linear infinite, foglayer_moveme calc(#{$cloudSpeed2} / 2) linear infinite;
+  animation: foglayer_02_opacity $cloudSpeed2 linear infinite, foglayer_moveme calc(#{$cloudSpeed2} / 2) linear infinite;
 }
 
-/* ---------- Moving Fog ---------- */
-/*
-  'size: cover' || 'size: 100%'; results remain the same
-  'attachment: scroll' can be added or removed; results remain the same
-  'attachment: fixed' causing unexpected results in Chrome
-  'repeat-x' || 'no-repeat'; results remain the same
-*/
 #foglayer_01 .image01, #foglayer_01 .image02 {
   background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png") center center/cover no-repeat transparent;
 }
