@@ -1,1 +1,20 @@
-<p>nav works!</p>
+<div class="nav-container">
+  <div class="nav">
+    <div class="nav-items">
+      <div class="nav-item"  *ngFor="let menuItem of menuItems">
+        <h1
+
+          [ngClass]="{'active': activeClass === menuItem}"
+          [title]="menuItem"
+          (click)="setActiveClass(menuItem)"
+        >
+          {{menuItem}}
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="logo">
+    <img class="background" src="./assets/img/logo_background.svg"/>
+    <img class="logo-orange" src="./assets/img/logo_orange.png" />
+  </div>
+</div>
