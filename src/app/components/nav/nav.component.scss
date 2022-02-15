@@ -1,0 +1,104 @@
+@import "/src/styles/styles";
+@import "../../../styles/animations/glow";
+
+$angle: 15px; //Angle in %
+$logoWidth: 160px;
+$navWidth: 80vw;
+
+.nav-container{
+  z-index: 1;
+  height:64px;
+  position: fixed;
+  left: calc(50% - #{$wrapperWidth / 2});
+  top: 0;
+  bottom:0;
+
+  display: flex;
+  width: 100%;
+  max-width: $wrapperWidth;
+  filter: $filter-shadow;
+  justify-content: center;
+  .nav{
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, calc(100% - #{$angle}) 100%, calc(0% + #{$angle}) 100%);
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: $black;
+    width: $navWidth;
+    height: 100%;
+    padding: 0 50px;
+    .nav-items{
+      font-family: Montserrat, serif;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      .nav-item{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        h1 {
+          cursor: pointer;
+          transition: .2s;
+          color: #959595;
+          position: relative;
+          &:before, &:after {
+            content: attr(title);
+            color: rgba(0,0,0,.1);
+            position: absolute;
+          }
+          &:before {
+            top: 0.5px;
+            left: 0.5px
+          };
+          &:after {
+            top: 1px;
+            left: 1px
+          };
+          &:hover{
+            color: #fff;
+            &:before, &:after {
+              color: rgba(0,0,0,.1);
+            }
+          }
+        }
+        .active{
+          -webkit-animation: glow 8s ease-in-out infinite alternate;
+          -moz-animation: glow 8s ease-in-out infinite alternate;
+          animation: glow 8s ease-in-out infinite alternate;
+          color: #fff;
+          &:before, &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logo{
+  position: fixed;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin-top: -15px;
+  img{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .logo-orange{
+    transform: rotate(1deg);
+    width: $logoWidth;
+    margin-top: -15px;
+  }
+  .background{
+    width: calc(#{$logoWidth} - 5px);
+    margin-top: -3px;
+  }
+}
+
+
+
+
