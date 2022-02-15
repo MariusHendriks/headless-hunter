@@ -1,0 +1,79 @@
+@import "/src/styles/styles";
+
+.band-container{
+  margin-top: -50px;
+  z-index: 5;
+  padding: 70px 30px 0 30px;
+  position: relative;
+  background-color: $black-lighter;
+  -webkit-box-shadow: inset 0px 5px 9px -3px #000000;
+  box-shadow: inset 0px 5px 9px -3px #000000;
+  .band-header{
+    position: absolute;
+    right: 60px;
+    top: -30px;
+    font-size: 50px;
+    text-transform: uppercase;
+    transform: rotate(3deg);
+  }
+  .band{
+    display: flex;
+    min-height: 80vh;
+    padding: 50px;
+    .band-member{
+      border-radius: $borderRadius;
+      -webkit-box-shadow: inset 0px 0px 27px 3px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px 0px 27px 3px rgba(0,0,0,0.75);
+      box-shadow: inset 0px 0px 27px 3px rgba(0,0,0,0.75);
+      width: 20%;
+      margin: 10px;
+      height: 600px;
+      background-color: white;
+      background-position: center;
+      background-size: cover;
+      .band-member-info-container{
+        height: 100%;
+        .band-member-info{
+          color: white;
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          justify-content: flex-end;
+          .band-member-info-box{
+            background-color: rgba(33, 36, 41, 0.75);
+            border-radius:  0 0 $borderRadius $borderRadius;
+            padding: 0 10px;
+            div{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            }
+            .name{
+              word-break: break-word;
+              font-weight: 900;
+              font-size: 20px;
+            }
+            .bio{
+              text-align: center;
+              line-height: 25px;
+              font-size: 14px;
+            }
+            .instrument{
+              text-transform: uppercase;
+              font-weight: 900;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.band-member-info-container {
+  display: none;
+}
+.band-member:hover .band-member-info-container {
+  display: block;
+}
