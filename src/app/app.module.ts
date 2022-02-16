@@ -8,6 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { BandComponent } from './pages/band/band.component';
 import { ShowsComponent } from './pages/shows/shows.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { MouseTrackerDirective } from './directives/mouse-tracker.directive';
+import { BandMemberComponent } from './components/band-member/band-member.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FooterComponent } from './pages/footer/footer.component';
     HomeComponent,
     BandComponent,
     ShowsComponent,
-    FooterComponent
+    FooterComponent,
+    MouseTrackerDirective,
+    BandMemberComponent
   ],
   imports: [
     BrowserModule,

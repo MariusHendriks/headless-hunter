@@ -1,0 +1,23 @@
+<div
+     *ngIf="bandMember"
+     [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + currentImage + '.png)'}"
+     class="band-member"
+     (mouseenter)="hoveredOver()"
+>
+  {{isHoveredOver}}
+  <div class="band-member-info-container">
+    <div class="band-member-info">
+      <div class="band-member-info-box">
+        <div class="name">
+          <h1 class="inner-shadow-text" [title]="bandMember.name">{{bandMember.name }}</h1>
+        </div>
+        <div class="bio">
+          {{bandMember.bio}}
+        </div>
+        <div class="instrument inner-shadow-text">
+          <h1 class="inner-shadow-text" [title]="bandMember.instrument">{{bandMember.instrument}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

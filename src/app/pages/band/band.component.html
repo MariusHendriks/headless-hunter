@@ -2,25 +2,12 @@
   <div class="band-header">
     <h1 class="inner-shadow-text" [title]="'The Band'">The Band</h1>
   </div>
-  <div class="band">
-    <div class="band-member" *ngFor="let bandMember of bandMembers"
-         [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + 'main.png)'}"
-    >
-        <div class="band-member-info-container">
-          <div class="band-member-info">
-            <div class="band-member-info-box">
-              <div class="name">
-                <h1 class="inner-shadow-text" [title]="bandMember.name">{{bandMember.name }}</h1>
-              </div>
-              <div class="bio">
-                {{bandMember.bio}}
-              </div>
-              <div class="instrument inner-shadow-text">
-                <h1 class="inner-shadow-text" [title]="bandMember.instrument">{{bandMember.instrument}}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+  <div class="band" appMouseTracker #mTracker=mouseTracker>
+    <app-band-member class="band-member-wrapper" *ngFor="let bandMember of bandMembers" [bandMember]="bandMember"></app-band-member>
   </div>
 </section>
+
+
+Positie van div ophalen met JS gewoon
+Center berekenen
+Onder de top van de div, boven de
