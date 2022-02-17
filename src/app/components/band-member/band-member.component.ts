@@ -10,12 +10,6 @@ export class BandMemberComponent implements OnInit {
   isHoveringOver: boolean = false;
   isHoveredOver: boolean = false;
   currentImage: string = "main";
-  xPos: number = 0;
-  yPos: number = 0;
-  xPosCenter: number = 0;
-  yPosCenter: number = 0;
-  xMouse: number = 0;
-  yMouse: number = 0;
   @Input() bandMember?: BandMember;
   @ViewChild('memberDiv') memberDiv:any;
   @HostListener('document:mousemove', ['$event'])
@@ -39,9 +33,6 @@ export class BandMemberComponent implements OnInit {
   getImageDependingOnMousePosition(xPos: number, yPos:number, divProps:DOMRect){
     const divWidth = divProps.width;
     const divHeight = divProps.height;
-
-    const divXPosCenter = divProps.x + divWidth / 2;
-    const divYPosCenter = divProps.y + divHeight / 2;
 
     //Check if it is the top image
     if(xPos > divProps.x && xPos < divProps.x + divWidth && yPos < divProps.y){

@@ -1,8 +1,9 @@
 @import "/src/styles/styles";
 .band-member{
-  width: 100%;
-  height: 100%;
-  background-color: white;
+  position: absolute;
+  width: 85%;
+  height: 40%;
+  background-color: $black-lighter;
   background-position: center;
   background-size: cover;
   border-radius: $borderRadius;
@@ -44,16 +45,6 @@
       }
     }
   }
-}
-
-.isHoveredOverTemp{
-  position: relative;
-  left:0;
-  top:0;
-  z-index: 100;
-  text-align: center;
-  background-color: blue;
-  color: white;
 }
 
 .band-member-info-container .band-member-info{
