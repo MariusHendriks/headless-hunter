@@ -46,9 +46,18 @@
   }
 }
 
+.isHoveredOverTemp{
+  position: relative;
+  left:0;
+  top:0;
+  z-index: 100;
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
 
 .band-member-info-container .band-member-info{
-  display: none;
+  display: none; //make none when done! :D
 }
 
 .band-member-info-container:hover .band-member-info{

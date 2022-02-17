@@ -1,10 +1,17 @@
+<div class="isHoveredOverTemp">
+  {{isHoveredOver}} <br/>
+
+</div>
+
+
 <div
-     *ngIf="bandMember"
-     [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + currentImage + '.png)'}"
-     class="band-member"
-     (mouseenter)="hoveredOver()"
+  *ngIf="bandMember"
+  [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + currentImage + '.png)'}"
+  class="band-member"
+  (mouseenter)="hoveredOver()"
+  (mouseleave)="hoverOut()"
+  #memberDiv
 >
-  {{isHoveredOver}}
   <div class="band-member-info-container">
     <div class="band-member-info">
       <div class="band-member-info-box">

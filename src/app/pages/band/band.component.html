@@ -2,12 +2,11 @@
   <div class="band-header">
     <h1 class="inner-shadow-text" [title]="'The Band'">The Band</h1>
   </div>
-  <div class="band" appMouseTracker #mTracker=mouseTracker>
-    <app-band-member class="band-member-wrapper" *ngFor="let bandMember of bandMembers" [bandMember]="bandMember"></app-band-member>
+  <div class="band">
+    <app-band-member
+      class="band-member-wrapper"
+      *ngFor="let bandMember of bandMembers"
+      [bandMember]="bandMember"
+    ></app-band-member>
   </div>
 </section>
-
-
-Positie van div ophalen met JS gewoon
-Center berekenen
-Onder de top van de div, boven de

@@ -1,6 +1,5 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { BandMember } from "../../models/models";
-import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-band',
@@ -47,15 +46,8 @@ export class BandComponent implements OnInit {
     },
   ];
 
-
-  @ViewChild('mTracker', {static:true}) mouseTracker: any;
-
   constructor() { }
 
   ngOnInit(): void {
-    this.mouseTracker.mousePos.subscribe((mousePos:MouseEvent) => {
-      console.log('x ', mousePos.clientX);
-      console.log('y ', mousePos.clientY);
-    });
   }
 }
