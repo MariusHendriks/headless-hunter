@@ -8,7 +8,8 @@ import { BandMember } from "../../models/models";
 })
 
 export class BandComponent implements OnInit {
-  public headBanging: string = '';
+  public membersHeadbanging: number = 0;
+  audioPlaying: boolean = false;
   bandMembers: BandMember[] = [
     {
       id: 0,
@@ -49,6 +50,24 @@ export class BandComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public addHeadbanger(){
+    this.membersHeadbanging++;
+    if(this.membersHeadbanging === 5 && !this.audioPlaying){
+      this.audioPlaying = true;
+      this.playAudio()
+    }
   }
+
+  playAudio(){
+    let audio = new Audio();
+    audio.src = "/assets/sound/Liberate_your_will.wav";
+    audio.load();
+    audio.play();
+  }
+
+  ngOnInit(): void {
+
+  }
+
+
 }
