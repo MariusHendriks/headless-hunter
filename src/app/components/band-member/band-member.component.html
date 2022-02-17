@@ -1,5 +1,5 @@
 <div
-  *ngIf="bandMember"
+  *ngIf="bandMember && !isHeadbanging"
   [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + currentImage + '.png)'}"
   class="band-member"
   (mouseenter)="hoveredOver()"
@@ -21,4 +21,10 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<div *ngIf="bandMember && isHeadbanging" class="band-member">
+  <div class="shadow"></div>
+  <img alt='Headbang time' src="{{bandMember.imgPath + 'headbang.gif'}}" class="video" />
 </div>

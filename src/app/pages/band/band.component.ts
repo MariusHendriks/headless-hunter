@@ -8,6 +8,7 @@ import { BandMember } from "../../models/models";
 })
 
 export class BandComponent implements OnInit {
+  public headBanging: string = '';
   bandMembers: BandMember[] = [
     {
       id: 0,

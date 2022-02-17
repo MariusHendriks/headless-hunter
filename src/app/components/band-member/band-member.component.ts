@@ -1,5 +1,6 @@
 import {Component, ElementRef, HostBinding, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {BandMember} from "../../models/models";
+import {BandComponent} from "../../pages/band/band.component";
 
 @Component({
   selector: 'app-band-member',
@@ -10,20 +11,24 @@ export class BandMemberComponent implements OnInit {
   isHoveringOver: boolean = false;
   isHoveredOver: boolean = false;
   currentImage: string = "main";
+  isHeadbanging: boolean = false;
+  imageLogger: string[] = [];
   @Input() bandMember?: BandMember;
   @ViewChild('memberDiv') memberDiv:any;
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: any) {
-    if(this.isHoveringOver){
-      this.currentImage = "main";
-    } else if(this.isHoveredOver){
-      const divClientRect = this.memberDiv.nativeElement.getBoundingClientRect();
-      this.currentImage = this.getImageDependingOnMousePosition(e.x, e.y, divClientRect);
+    if(!this.isHeadbanging){
+      if(this.isHoveringOver){
+        this.currentImage = "main";
+      } else if(this.isHoveredOver){
+        const divClientRect = this.memberDiv.nativeElement.getBoundingClientRect();
+        this.currentImage = this.getImageDependingOnMousePosition(e.x, e.y, divClientRect);
+        this.logImage(this.currentImage);
+      }
     }
   }
 
-  constructor() {
-
+  constructor(public parent: BandComponent) {
   }
 
   ngOnInit(): void {
@@ -65,11 +70,24 @@ export class BandMemberComponent implements OnInit {
         return 'bottomright'
       }
     }
-
     return 'main';
   }
 
+  logImage(img:string){
+    if(img !== this.imageLogger[this.imageLogger.length-1]){
+      if(this.imageLogger.length > 5){
+        this.imageLogger.shift();
+      }
+      this.imageLogger.push(img);
+      if(
+        this.imageLogger.filter(x => x === "main").length > 2 &&
+        this.imageLogger.filter(x => x === "up").length > 0 &&
+        this.imageLogger.filter(x => x === "bottom").length > 0){
+          this.isHeadbanging = true;
+      }
 
+    }
+  }
   hoveredOver(){
    this.isHoveredOver = true;
    this.isHoveringOver = true;
