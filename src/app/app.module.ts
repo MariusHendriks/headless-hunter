@@ -10,6 +10,7 @@ import { ShowsComponent } from './pages/shows/shows.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { BandMemberComponent } from './components/band-member/band-member.component';
 import { ShowComponent } from './components/show/show.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ShowComponent } from './components/show/show.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

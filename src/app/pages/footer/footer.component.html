@@ -1,1 +1,16 @@
-<p>footer works!</p>
+<div class="footer-container">
+  <div class="footer">
+    <div>
+      ©Headless Hunter {{currentYear}}
+    </div>
+    <div class="divider"></div>
+    <div class="management">
+      Management and bookings: <a href="mailto:headlesshunterofficial@gmail.com">headlesshunterofficial@gmail.com</a>
+    </div>
+    <div class="divider"></div>
+    <div class="socials">
+      <fa-icon (click)="goToUrl('https://www.facebook.com/headlesshunterofficial')" class="icon" [icon]="faFacebook"></fa-icon>
+      <fa-icon (click)="goToUrl('https://www.instagram.com/headlesshunterofficial/')" class="icon" [icon]="faInstagram"></fa-icon>
+    </div>
+  </div>
+</div>
