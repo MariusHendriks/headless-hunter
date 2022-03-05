@@ -4,20 +4,23 @@ $wrapperWidth: 1200px;
 $borderRadius: 30px;
 
 //Colors
+$white: #DCDCDC;
 $black: #232323;
 $black-lighter: #2E2E2E;
 
 
 $filter-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
 
+html{
+  margin: 0;
+  padding: 0;
+}
 
 body{
   font-family: Montserrat, serif;
   background-color: $black-lighter;
   overflow-y:scroll;
   overflow-x: hidden;
-  min-height: 100vh;
-  background-color: white;
   margin: 0;
   padding: 0;
 }
