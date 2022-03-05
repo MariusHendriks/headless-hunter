@@ -9,6 +9,7 @@ import { BandComponent } from './pages/band/band.component';
 import { ShowsComponent } from './pages/shows/shows.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { BandMemberComponent } from './components/band-member/band-member.component';
+import { ShowComponent } from './components/show/show.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BandMemberComponent } from './components/band-member/band-member.compon
     BandComponent,
     ShowsComponent,
     FooterComponent,
-    BandMemberComponent
+    BandMemberComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,

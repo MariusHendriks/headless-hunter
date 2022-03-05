@@ -1,1 +1,8 @@
-<p>shows works!</p>
+<section class="shows">
+  <app-show
+    *ngFor="let show of shows; let i = index"
+    [attr.data-index]="i"
+    [show]="show"
+    class="show-wrapper"
+  ></app-show>
+</section>

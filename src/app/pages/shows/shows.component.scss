@@ -1,0 +1,34 @@
+@import "/src/styles/styles";
+
+
+.shows{
+  background-color: $black-lighter;
+  min-height: 100vh;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .show-wrapper{
+    width: 90%;
+    background-color: $black;
+    color: $white;
+    display: flex;
+    line-height: 27px;
+    margin: 15px;
+    padding: 10px;
+    justify-content: space-between;
+    -webkit-box-shadow: inset 0px 5px 6px -3px #111111;
+    box-shadow: inset 0px 5px 6px -3px #111111;
+    &:first-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) 0 0; }
+    &:last-child{ border-radius: 0 0 calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .shows{
+    .show-wrapper{
+      max-width: 1150px;
+    }
+  }
+}

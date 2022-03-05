@@ -9,7 +9,7 @@ $navWidth: 80vw;
   z-index: 10;
   height:64px;
   position: fixed;
-  left: calc(50% - #{$wrapperWidth / 2});
+  left: calc(50% - #{$wrapperWidth}  / 2);
   top: 0;
   bottom:0;
 

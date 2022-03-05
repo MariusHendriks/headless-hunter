@@ -1,0 +1,74 @@
+@import "/src/styles/styles";
+
+.show{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  .details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .ticket-button{
+    background-color: $black-lighter;
+    color: $white;
+    border: none;
+    filter: $filter-shadow;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: fit-content;
+    font-size: 24px;
+    padding: 15px;
+    margin: 15px 0;
+    cursor: pointer;
+  }
+  .unavailable{
+    background-color: #444444;
+    cursor: not-allowed;
+    filter: none;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .show{
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 10px;
+    .details{
+      width: 80%;
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .show{
+    .details{
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      .venue{ width: 40%; }
+      .place-country{ width: 30%; }
+      .date{ width: 20%; }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .show{
+    padding: 0 30px;
+    .details{
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  //meuk
+}
