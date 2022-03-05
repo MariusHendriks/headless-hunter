@@ -4,7 +4,7 @@
   background-color: $black;
   margin-top: 100px;
   color: $white;
-  height: 100px;
+  padding: 30px;
   filter: $filter-shadow;
   display: flex;
   align-items: center;
@@ -28,6 +28,24 @@
         cursor: pointer;
         font-size: 25px;
         padding: 0 10px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer-container{
+    .footer{
+      flex-direction: column;
+      .divider{
+        display: none;
+      }
+      div{
+        text-align: center;
+        order: 1;
+        padding: 5px 0;
+      }
+      .socials{
+        order: 0;
       }
     }
   }
