@@ -36,6 +36,7 @@
       flex-direction: column;
       justify-content: flex-end;
       .band-member-info-box{
+        filter: $filter-shadow;
         background-color: rgba(33, 36, 41, 0.75);
         border-radius:  0 0 $borderRadius $borderRadius;
         padding: 0 10px;
@@ -68,6 +69,7 @@
 .band-member-info-container .band-member-info{
   display: none;
 }
+
 
 .band-member-info-container:hover .band-member-info{
   display: flex;

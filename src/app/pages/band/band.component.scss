@@ -9,8 +9,6 @@
   justify-content: center;
   position: relative;
   background-color: $black-lighter;
-  -webkit-box-shadow: inset 0px 5px 9px -3px #000000;
-  box-shadow: inset 0px 5px 9px -3px #000000;
   .band-header{
     display: flex;
     justify-content: flex-end;
@@ -30,6 +28,7 @@
     display: flex;
     justify-content: center;
     width: 90%;
+    max-width: 1800px;
     .band-member-wrapper{
       margin: 100px 0;
       display: flex;

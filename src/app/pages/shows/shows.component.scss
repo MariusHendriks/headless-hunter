@@ -3,8 +3,7 @@
 
 .shows{
   background-color: $black-lighter;
-  min-height: 100vh;
-  padding: 50px 0;
+  margin-top: -5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +28,14 @@
   .shows{
     .show-wrapper{
       max-width: 1150px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .shows{
+    .show-wrapper{
+      max-width: 1600px;
     }
   }
 }

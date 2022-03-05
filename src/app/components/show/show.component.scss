@@ -11,6 +11,9 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
+    .date{
+      text-align: center;
+    }
   }
   .ticket-button{
     background-color: $black-lighter;
