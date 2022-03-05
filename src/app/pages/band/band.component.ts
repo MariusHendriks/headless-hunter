@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BandMember } from "../../models/models";
 
 @Component({
@@ -7,7 +7,7 @@ import { BandMember } from "../../models/models";
   styleUrls: ['./band.component.scss']
 })
 
-export class BandComponent implements OnInit {
+export class BandComponent {
   public membersHeadbanging: number = 0;
   audioPlaying: boolean = false;
   bandMembers: BandMember[] = [
@@ -65,10 +65,4 @@ export class BandComponent implements OnInit {
     audio.volume = 0.3;
     audio.play();
   }
-
-  ngOnInit(): void {
-
-  }
-
-
 }
