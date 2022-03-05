@@ -80,9 +80,8 @@ export class BandMemberComponent implements OnInit {
       }
       this.imageLogger.push(img);
       if(
-        this.imageLogger.filter(x => x === "main").length > 2 &&
-        this.imageLogger.filter(x => x === "up").length > 0 &&
-        this.imageLogger.filter(x => x === "bottom").length > 0){
+        this.imageLogger.filter(x => x === "up").length > 1 &&
+        this.imageLogger.filter(x => x === "bottom").length > 1){
           this.isHeadbanging = true;
           this.parent.addHeadbanger();
       }
