@@ -1,1 +1,14 @@
-<p>band works!</p>
+<section class="band-container">
+
+<!--  <div class="band-header">-->
+<!--    <h1 class="inner-shadow-text" [title]="'The Band'">The Band</h1>-->
+<!--  </div>-->
+
+  <div class="band">
+    <app-band-member
+      *ngFor="let bandMember of bandMembers"
+      [bandMember]="bandMember"
+      class="band-member-wrapper"
+    ></app-band-member>
+  </div>
+</section>

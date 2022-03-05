@@ -1,15 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 $wrapperWidth: 1200px;
+$borderRadius: 30px;
 
 //Colors
 $black: #232323;
 $black-lighter: #2E2E2E;
 
+
 $filter-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
 
 
 body{
+  font-family: Montserrat, serif;
   background-color: $black-lighter;
   overflow-y:scroll;
   overflow-x: hidden;
@@ -17,4 +20,25 @@ body{
   background-color: white;
   margin: 0;
   padding: 0;
+}
+
+
+.inner-shadow-text{
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  &:before, &:after {
+    width: 100%;
+    content: attr(title);
+    color: rgba(0,0,0,.1);
+    position: absolute;
+  }
+  &:before {
+    top: 0.5px;
+    left: 0.5px
+  };
+  &:after {
+    top: 1px;
+    left: 1px
+  };
 }

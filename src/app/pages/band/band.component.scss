@@ -1,0 +1,42 @@
+@import "/src/styles/styles";
+
+.band-container{
+  flex-direction: column;
+  margin-top: -50px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: $black-lighter;
+  -webkit-box-shadow: inset 0px 5px 9px -3px #000000;
+  box-shadow: inset 0px 5px 9px -3px #000000;
+  .band-header{
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
+    width: 100%;
+    margin-right: 8vw;
+    padding-top: 50px;
+    margin-bottom: -74px;
+    h1{
+      font-size: 70px;
+      text-transform: uppercase;
+      transform: rotate(3deg);
+    }
+
+  }
+  .band{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    .band-member-wrapper{
+      margin: 100px 0;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      padding-bottom: 33%;
+    }
+  }
+}
