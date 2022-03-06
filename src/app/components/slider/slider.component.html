@@ -1,0 +1,21 @@
+<swiper [config]="config" *ngIf="bandMembers">
+  <div
+    class="swiper-wrapper"
+  >
+
+    <div class="swiper-slide" *ngFor="let bandMember of bandMembers">
+      <img [src]="bandMember.imgPath + 'main.png'" />
+      <div class="swiper-slide">
+          <div class="name">{{bandMember.name}}</div>
+          <div class="bio">{{bandMember.bio}}</div>
+          <div class="instrument">{{bandMember.instrument}}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</swiper>

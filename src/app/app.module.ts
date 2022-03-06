@@ -11,6 +11,8 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { BandMemberComponent } from './components/band-member/band-member.component';
 import { ShowComponent } from './components/show/show.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ShowsComponent,
     FooterComponent,
     BandMemberComponent,
-    ShowComponent
+    ShowComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxUsefulSwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
