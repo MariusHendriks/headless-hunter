@@ -1,5 +1,5 @@
 <div
-  *ngIf="bandMember && !isHeadbanging"
+  *ngIf="bandMember"
   class="band-member"
   (mouseenter)="hoveredOver()"
   (mouseleave)="hoverOut()"
@@ -26,10 +26,12 @@
     <div class="instrument inner-shadow-text">
       <h1 class="inner-shadow-text" [title]="bandMember.instrument">{{bandMember.instrument}}</h1>
     </div>
+  </div>
+  <div *ngIf="bandMember && isHeadbanging">
+    <img alt='Headbang time' src="{{bandMember.imgPath + 'headbang.gif'}}" class="video" />
+  </div>
+  <div class="shadow" [ngStyle]="{'z-index': (isHeadbanging) ? '8' : '4'}"></div>
 </div>
 
 
-<div *ngIf="bandMember && isHeadbanging" class="band-member">
-  <div class="shadow"></div>
-  <img alt='Headbang time' src="{{bandMember.imgPath + 'headbang.gif'}}" class="video" />
-</div>
+
