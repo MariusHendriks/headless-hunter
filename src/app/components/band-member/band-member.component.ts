@@ -7,7 +7,7 @@ import {BandComponent} from "../../pages/band/band.component";
   templateUrl: './band-member.component.html',
   styleUrls: ['./band-member.component.scss']
 })
-export class BandMemberComponent implements OnInit {
+export class BandMemberComponent {
   isHoveringOver: boolean = false;
   isHoveredOver: boolean = false;
   currentImage: string = "main";
@@ -23,16 +23,13 @@ export class BandMemberComponent implements OnInit {
       } else if(this.isHoveredOver){
         const divClientRect = this.memberDiv.nativeElement.getBoundingClientRect();
         this.currentImage = this.getImageDependingOnMousePosition(e.x, e.y, divClientRect);
+        //Show die en andere hiden
         this.logImage(this.currentImage);
       }
     }
   }
 
   constructor(public parent: BandComponent) {
-  }
-
-  ngOnInit(): void {
-
   }
 
   getImageDependingOnMousePosition(xPos: number, yPos:number, divProps:DOMRect){

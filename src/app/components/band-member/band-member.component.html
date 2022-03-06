@@ -1,26 +1,31 @@
 <div
   *ngIf="bandMember && !isHeadbanging"
-  [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + currentImage + '.png)'}"
   class="band-member"
   (mouseenter)="hoveredOver()"
   (mouseleave)="hoverOut()"
   #memberDiv
 >
-  <div class="band-member-info-container">
-    <div class="band-member-info">
-      <div class="band-member-info-box">
-        <div class="name">
-          <h1 class="inner-shadow-text" [title]="bandMember.name">{{bandMember.name }}</h1>
-        </div>
-        <div class="bio">
-          {{bandMember.bio}}
-        </div>
-        <div class="instrument inner-shadow-text">
-          <h1 class="inner-shadow-text" [title]="bandMember.instrument">{{bandMember.instrument}}</h1>
-        </div>
-      </div>
-    </div>
+  <div class="images">
+    <img [ngStyle]="{'display' : 'flex'}" [src]="bandMember.imgPath + 'main.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='up') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'up.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='upright') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'upright.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='right') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'right.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='bottomright') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'bottomright.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='bottom') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'bottom.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='bottomleft') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'bottomleft.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='left') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'left.png'"/>
+    <img [ngStyle]="{'display': (currentImage ==='upleft') ? 'flex' : 'none'}" [src]="bandMember.imgPath + 'upleft.png'"/>
   </div>
+  <div class="info">
+    <div>
+      <h1 class="inner-shadow-text" [title]="bandMember.name">{{bandMember.name }}</h1>
+    </div>
+    <div>
+      {{bandMember.bio}}
+    </div>
+    <div class="instrument inner-shadow-text">
+      <h1 class="inner-shadow-text" [title]="bandMember.instrument">{{bandMember.instrument}}</h1>
+    </div>
 </div>
 
 
