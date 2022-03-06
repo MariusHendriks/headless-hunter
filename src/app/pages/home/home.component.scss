@@ -2,15 +2,11 @@ $cloudSpeed1: 6s;
 $cloudSpeed2: 80s;
 
 
-.home{
-  height: 100vh;
-  width: 100vw;
-  background-image: url("/assets/img/home_cover.png");
-  background-size: cover;
-  background-position: center;
-}
-.home-image{
+.home-container{
+  .home-image{
+    max-width: 100vw;
     width: 100vw;
+  }
 }
 
 .fogwrapper {

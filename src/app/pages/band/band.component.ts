@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { BandMember } from "../../models/models";
 
 @Component({
@@ -7,7 +7,7 @@ import { BandMember } from "../../models/models";
   styleUrls: ['./band.component.scss']
 })
 
-export class BandComponent {
+export class BandComponent implements OnInit{
   public membersHeadbanging: number = 0;
   audioPlaying: boolean = false;
   bandMembers: BandMember[] = [
@@ -15,7 +15,7 @@ export class BandComponent {
       id: 0,
       name: "Mark Hendriks",
       instrument: 'Guitar',
-      bio: 'Good enough? No. We can do better. Mark makes sure sloppy riffs don\'t make it to Spotify. If you hear high notes in your ear it\'s probably Mark',
+      bio: 'Good enough? No. We can do better. Mark makes sure sloppy riffs don\'t make it on the record. If you hear high notes in your ear it\'s probably Mark',
       imgPath: '/assets/img/band-members/mark/',
     },
     {
@@ -47,6 +47,14 @@ export class BandComponent {
       imgPath: '/assets/img/band-members/bram/',
     },
   ];
+  public innerWidth: any;
+  ngOnInit() {
+    this.innerWidth = window.innerWidth;
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.innerWidth = window.innerWidth;
+  }
 
   constructor() { }
 

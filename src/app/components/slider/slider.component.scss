@@ -1,12 +1,77 @@
-swiper {
-  height: 70vh;
+@import "/src/styles/styles";
+
+.swiper-containert{
   width: 100%;
-  text-align: center;
-  img{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  display: flex;
+  swiper {
+    height: 70vh;
     width: 100%;
+    padding: 30px 0;
+    filter: $filter-shadow;
+    text-align: center;
+    .swiper-slide {
+      background-position: top;
+      background-size: cover;
+      border-radius: $borderRadius;
+      img {
+        position: absolute;
+        width: auto;
+        height: auto;
+        border-radius: $borderRadius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .content{
+        border-radius: 0 0  $borderRadius $borderRadius;
+        color: white;
+        z-index: 5;
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(33, 36, 41, .85);
+        .bio{
+          padding: 0 5px;
+        }
+      }
+    }
   }
+  .swiper-pagination{
+    width: 100%;
+    margin-top:-25px;
+    .swiper-pagination-bullet{
+      width: 20px;
+      height: 20px;
+      margin: 0 8px;
+      display: inline-block;
+      border-radius: 50%;
+      background: #000;
+      opacity: 0.2;
+    }
+  }
+}
+@media only screen and (min-width: 480px) {
+  .swiper-containert {
+    swiper {
+      height: 90vh;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .swiper-containert {
+    swiper {
+      height: 800px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
 }
