@@ -17,7 +17,7 @@ export class ShowsComponent implements OnInit {
       linkToTickets: 'https://www.stukafest.nl/eindhoven/',
     },
     {
-      event: 'Metal Battle',
+      event: 'Metal Jam',
       venue: 'De Groote Weiver',
       place: 'Wormerveer',
       country: 'Netherlands',
@@ -30,7 +30,16 @@ export class ShowsComponent implements OnInit {
       place: 'Tilburg',
       country: 'Netherlands',
       date: '21-02-2022',
-      linkToTickets: ''
+      linkToTickets: '',
+    },
+    {
+      event: 'Changing Tides + Headless Hunter',
+      venue: 'Cafe Govers',
+      place: 'Geffen',
+      country: 'Netherlands',
+      date: '01-10-2022',
+      linkToTickets: 'https://www.facebook.com/events/248227777237431',
+      free: true
     }
   ]
   constructor() { }
