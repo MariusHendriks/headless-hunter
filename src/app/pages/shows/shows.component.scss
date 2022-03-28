@@ -1,7 +1,12 @@
 @import "/src/styles/styles";
 
+.title-container{
+  margin-top: 70px;
+  margin-bottom: -50px;
+}
 
 .shows{
+  padding-top: 50px;
   background-color: $black-lighter;
   margin-top: -5px;
   display: flex;

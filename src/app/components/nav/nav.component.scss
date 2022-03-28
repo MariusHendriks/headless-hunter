@@ -1,5 +1,5 @@
 @import "/src/styles/styles";
-@import "../../../styles/animations/glow";
+@import "/src/styles/animations/glow";
 
 $angle: 15px; //Angle in %
 $logoWidth: 160px;
@@ -102,3 +102,27 @@ $navWidth: 80vw;
 
 
 
+
+@media only screen and (max-width: 1200px) {
+  .nav-container{
+    left: unset;
+    .nav{
+      width: 100vw;
+      padding: 0 10px;
+      clip-path: unset;
+      .nav-items{
+        .nav-item{
+          h1 {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-container{
+    display: none;
+  }
+}

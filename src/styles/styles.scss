@@ -7,12 +7,18 @@ $borderRadius: 30px;
 $white: #DCDCDC;
 $black: #232323;
 $black-lighter: #2E2E2E;
+$green: #00F000;
+$orange: #FF7000;
+:host ::ng-deep .swiper-pagination{
+  --swiper-theme-color: #FF7000;
+}
 
 $filter-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
 
 html{
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body{
@@ -44,3 +50,7 @@ body{
     left: 1px
   };
 }
+.wrapper{
+  max-width: 100vw;
+}
+

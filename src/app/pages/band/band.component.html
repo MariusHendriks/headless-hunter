@@ -1,14 +1,19 @@
 <section class="band-container">
-
-<!--  <div class="band-header">-->
-<!--    <h1 class="inner-shadow-text" [title]="'The Band'">The Band</h1>-->
-<!--  </div>-->
-
-  <div class="band">
-    <app-band-member
-      *ngFor="let bandMember of bandMembers"
-      [bandMember]="bandMember"
-      class="band-member-wrapper"
-    ></app-band-member>
+  <div class="title-container">
+    <app-title class="title" text="The Band"></app-title>
   </div>
+
+  <div class="band-cards-container" *ngIf="innerWidth > 1200">
+    <div class="band">
+      <app-band-member
+        *ngFor="let bandMember of bandMembers"
+        [bandMember]="bandMember"
+        class="band-member-wrapper"
+      ></app-band-member>
+    </div>
+  </div>
+  <app-slider *ngIf="innerWidth <= 1200" [bandMembers]="bandMembers"></app-slider>
 </section>
+
+
+

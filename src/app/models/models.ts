@@ -14,4 +14,5 @@ export interface Show{
   country: string,
   date: string,
   linkToTickets: string
+  free?: boolean
 }
