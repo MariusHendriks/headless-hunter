@@ -4,6 +4,7 @@
   (mouseenter)="hoveredOver()"
   (mouseleave)="hoverOut()"
   #memberDiv
+  (mouseover)="changeText=true" (mouseout)="changeText=false"
 >
   <div class="images">
     <img [ngStyle]="{'display' : 'flex'}" [src]="bandMember.imgPath + 'main.png'"/>
@@ -34,4 +35,8 @@
 </div>
 
 
+<div >
+  <span *ngIf="!changeText">Hide</span>
+  <span >Show</span>
+</div>
 

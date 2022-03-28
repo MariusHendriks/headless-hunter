@@ -33,7 +33,12 @@
     z-index: 6;
     color: $white;
     text-align: center;
+    opacity: 0;
     background: rgba(33, 36, 41, .85)
+  }
+  .info:hover{
+    opacity: 1;
+    transition: 0.3s;
   }
   .video{
     width: 100%;
@@ -57,5 +62,11 @@
   }
 }
 
+.band-member .info{
+  transition: 0.3s;
+  opacity: 0;
+}
 
-
+.band-member:hover .info{
+  opacity: 1;
+}

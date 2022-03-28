@@ -1,0 +1,15 @@
+.header-text-container{
+  z-index: 9;
+  position: relative;
+  .header-text{
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    text-transform: uppercase;
+    height: 100%;
+    h1{
+      font-size: 50px;
+      margin: 0;
+    }
+  }
+}

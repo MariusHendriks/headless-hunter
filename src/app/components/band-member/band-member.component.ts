@@ -13,6 +13,7 @@ export class BandMemberComponent {
   currentImage: string = "main";
   isHeadbanging: boolean = false;
   imageLogger: string[] = [];
+
   @Input() bandMember?: BandMember;
   @ViewChild('memberDiv') memberDiv:any;
   @HostListener('document:mousemove', ['$event'])
@@ -28,8 +29,9 @@ export class BandMemberComponent {
       }
     }
   }
-
+  changeText: boolean;
   constructor(public parent: BandComponent) {
+    this.changeText = false;
   }
 
   getImageDependingOnMousePosition(xPos: number, yPos:number, divProps:DOMRect){

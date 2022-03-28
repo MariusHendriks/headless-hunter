@@ -13,6 +13,8 @@ import { ShowComponent } from './components/show/show.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SliderComponent } from './components/slider/slider.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { SliderComponent } from './components/slider/slider.component';
     FooterComponent,
     BandMemberComponent,
     ShowComponent,
-    SliderComponent
+    SliderComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxUsefulSwiperModule
+    NgxUsefulSwiperModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

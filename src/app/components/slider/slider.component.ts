@@ -1,10 +1,22 @@
 import {Component, HostListener, Input} from '@angular/core';
 import {SwiperOptions} from "swiper";
 import {BandMember} from "../../models/models";
+import {style, animate, transition, trigger} from '@angular/animations';
 @Component({
   selector: 'app-slider',
+  animations: [
+    trigger('myInsertRemoveTrigger', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('100ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('100ms', style({ opacity: 0 }))
+      ])
+    ]),
+  ],
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent {
   @Input() bandMembers?: BandMember[];

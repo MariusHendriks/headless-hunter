@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   activeClass: string = "home";
-  menuItems: string[] = ['home', 'band', ' ', 'shows', 'contact'];
+  menuItems: string[] = ['home', 'band', ' ', 'shows', 'music'];
   constructor() { }
 
   ngOnInit(): void {
