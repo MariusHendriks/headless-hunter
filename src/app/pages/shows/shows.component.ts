@@ -40,5 +40,4 @@ export class ShowsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
