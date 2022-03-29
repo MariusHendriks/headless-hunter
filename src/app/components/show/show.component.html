@@ -18,7 +18,7 @@
     [disabled]="linkUnavailable"
     [ngClass]="linkUnavailable ? 'ticket-button unavailable' : 'ticket-button'"
   >
-    Tickets
+    {{show.free ? "FREE!" : "Tickets"}}
     </button>
 </div>
 
