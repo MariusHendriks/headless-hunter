@@ -5,8 +5,6 @@ export interface BandMember{
   bio: string,
   imgPath: string,
 }
-
-
 export interface Show{
   event: string,
   venue: string,

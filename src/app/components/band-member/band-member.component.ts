@@ -53,7 +53,7 @@ export class BandMemberComponent {
       if(yPos > divProps.y && yPos < divProps.y + divHeight){
         return 'left';
       } else if(yPos < divProps.y){
-        return 'topleft';
+        return 'upleft';
       } else if(yPos > divProps.y + divHeight){
         return 'bottomleft'
       }

@@ -1,9 +1,8 @@
 <div class="nav-container">
   <div class="nav">
     <div class="nav-items">
-      <div class="nav-item"  *ngFor="let menuItem of menuItems">
+      <div class="nav-item" *ngFor="let menuItem of menuItems" (click)="scrollIntoView(menuItem)">
         <h1
-
           [ngClass]="{'active': activeClass === menuItem}"
           [title]="menuItem"
           (click)="setActiveClass(menuItem)"
@@ -14,7 +13,7 @@
     </div>
   </div>
   <div class="logo">
-    <img class="background" src="./assets/img/logo_background.svg"/>
-    <img class="logo-orange" src="./assets/img/logo_orange.png" />
+    <img alt="background" class="background" src="./assets/img/logo_background.svg"/>
+    <img alt="logo" class="logo-orange" src="./assets/img/logo_orange.png" />
   </div>
 </div>

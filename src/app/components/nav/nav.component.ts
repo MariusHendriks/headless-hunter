@@ -16,4 +16,9 @@ export class NavComponent implements OnInit {
   setActiveClass(menuItem: string){
     this.activeClass = menuItem;
   }
+
+  scrollIntoView(elem: string) {
+    // @ts-ignore
+    document.querySelector("#" + elem).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
