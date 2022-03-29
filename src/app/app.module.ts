@@ -15,6 +15,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { SliderComponent } from './components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleComponent } from './components/title/title.component';
+import { MusicComponent } from './pages/music/music.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TitleComponent } from './components/title/title.component';
     BandMemberComponent,
     ShowComponent,
     SliderComponent,
-    TitleComponent
+    TitleComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,

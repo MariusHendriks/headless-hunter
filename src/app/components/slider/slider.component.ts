@@ -48,9 +48,18 @@ export class SliderComponent {
       modifier: 1,
       slideShadows : true,
     },
-    slidesPerView: innerWidth > 600 ? 2 : 1.2,
+    slidesPerView: this.getSlidesForWidth(innerWidth),
     spaceBetween: 30,
   };
-
-
+  getSlidesForWidth(width:number){
+    if(width > 1000){
+      return 2.5
+    } else if (width > 800) {
+      return 2.5
+    } else if (width > 600) {
+      return 2
+    } else {
+      return 1.5
+    }
+  }
 }
