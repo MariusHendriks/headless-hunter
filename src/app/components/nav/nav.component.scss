@@ -2,7 +2,7 @@
 @import "/src/styles/animations/glow";
 
 $angle: 15px; //Angle in %
-$logoWidth: 160px;
+$logoWidth: 150px;
 $navWidth: 80vw;
 
 .nav-container{
@@ -83,7 +83,8 @@ $navWidth: 80vw;
   display: grid;
   align-items: center;
   justify-items: center;
-  margin-top: -15px;
+  margin-top: 0px;
+  padding-top: 5px;
   img{
     grid-column: 1;
     grid-row: 1;
@@ -95,7 +96,7 @@ $navWidth: 80vw;
   }
   .background{
     width: calc(#{$logoWidth} - 5px);
-    margin-top: -3px;
+    margin-top: -47px;
   }
 }
 
