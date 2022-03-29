@@ -6,7 +6,7 @@ $logoWidth: 160px;
 $navWidth: 80vw;
 
 .nav-container{
-  z-index: 10;
+  z-index: 1000;
   height:64px;
   position: fixed;
   left: calc(50% - #{$wrapperWidth}  / 2);
