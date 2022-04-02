@@ -11,7 +11,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { BandMemberComponent } from './components/band-member/band-member.component';
 import { ShowComponent } from './components/show/show.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { SwiperModule } from 'swiper/angular';
 import { SliderComponent } from './components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleComponent } from './components/title/title.component';
@@ -35,7 +35,7 @@ import { MusicComponent } from './pages/music/music.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    NgxUsefulSwiperModule,
+    SwiperModule,
     BrowserAnimationsModule,
   ],
   providers: [],

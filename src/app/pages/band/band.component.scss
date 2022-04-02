@@ -24,27 +24,7 @@
     }
   }
 }
-:host ::ng-deep .swiper-pagination{
-  --swiper-theme-color: $green;
-  display: flex;
-  justify-content: center;
-  z-index: 5;
-  width: 100%;
-  .swiper-pagination-bullet {
-    width: 20px ;
-    height: 20px ;
-    margin: 10px 7px;
-    background-color: #696969;
-    box-shadow: 1px 1px 3px 1px #000000;
-  }
 
-  .swiper-pagination-bullet-active {
-    box-shadow: inset 0px 5px 6px -3px #111111;
-    background-color: $orange;
-    width: 20px;
-    height: 20px ;
-  }
-}
 
 @media only screen and (min-width: 768px) {
   .band-container{

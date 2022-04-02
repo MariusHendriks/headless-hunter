@@ -18,20 +18,11 @@ export class ShowsComponent implements OnInit {
       free: true
     },
     {
-      event: 'Welschap DxIxY Fest',
-      venue: 'DIY',
-      place: 'Eindhoven',
-      country: 'Netherlands',
-      date: '06-05-2022',
-      linkToTickets: 'https://www.facebook.com/events/658978278517772/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A397343618881768%7D%7D]%22%7D',
-      free: true
-    },
-    {
       event: 'Nephylim +DÆMORTHAN + Headless Hunter',
       venue: 'Willem 2',
       place: "s' Hertogenbosch",
       country: 'Netherlands',
-      date: '07-05-2022',
+      date: '06-05-2022',
       linkToTickets: 'https://www.willem-twee.nl/alle-activiteiten/nephylim-dmorthan-headless-hunter-6-mei',
       free: false
     },
@@ -43,8 +34,18 @@ export class ShowsComponent implements OnInit {
       date: '01-10-2022',
       linkToTickets: 'https://www.facebook.com/events/248227777237431',
       free: true
-    }
-  ]
+    },
+    {
+      event: 'Welschap DxIxY Fest',
+      venue: 'DIY',
+      place: 'Eindhoven',
+      country: 'Netherlands',
+      date: '07-05-2022',
+      linkToTickets: 'https://www.facebook.com/events/658978278517772/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A397343618881768%7D%7D]%22%7D',
+      free: true
+    },
+  ].sort((val1, val2)=> { // @ts-ignore
+    return new Date(val1.date) - new Date(val2.date)})
   constructor() { }
 
   ngOnInit(): void {

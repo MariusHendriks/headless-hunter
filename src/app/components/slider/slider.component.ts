@@ -1,7 +1,11 @@
 import {Component, HostListener, Input} from '@angular/core';
-import {SwiperOptions} from "swiper";
+import SwiperCore , {SwiperOptions, EffectCoverflow, Navigation } from "swiper";
 import {BandMember} from "../../models/models";
 import {style, animate, transition, trigger} from '@angular/animations';
+
+// install Swiper modules
+SwiperCore.use([EffectCoverflow, Navigation]);
+
 @Component({
   selector: 'app-slider',
   animations: [
@@ -21,6 +25,7 @@ import {style, animate, transition, trigger} from '@angular/animations';
 export class SliderComponent {
   @Input() bandMembers?: BandMember[];
   public innerWidth: any;
+  public sliderIndex: number = 0;
   ngOnInit() {
     this.innerWidth = window.innerWidth;
   }
@@ -28,38 +33,58 @@ export class SliderComponent {
   onResize(event:any) {
     this.innerWidth = window.innerWidth;
   }
+
   config: SwiperOptions = {
-    pagination: { el: '.swiper-pagination', clickable: true },
+    pagination: { bulletClass: 'swiper-bullet' },
     loop: true,
     loopedSlides: 5,
     centeredSlides: true,
     grabCursor: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
     effect: 'coverflow',
-    slideNextClass: '.swiper-button-next',
-    slidePrevClass: '.swiper-button-prev',
     coverflowEffect: {
       rotate: 10,
       stretch: 80,
       depth: 350,
       modifier: 1,
-      slideShadows : true,
+      slideShadows : false,
     },
     slidesPerView: this.getSlidesForWidth(innerWidth),
     spaceBetween: 30,
   };
   getSlidesForWidth(width:number){
     if(width > 1000){
-      return 2.5
+      return 2.3
     } else if (width > 800) {
-      return 2.5
+      return 2.3
     } else if (width > 600) {
       return 2
     } else {
-      return 1.5
+      return 1.3
+    }
+  }
+  onSlideChange(e: any) {
+    this.sliderIndex = e.activeIndex - 5;
+    if(this.sliderIndex === 5){
+      this.sliderIndex = 0;
+    }
+  }
+
+  getImage(indexParam:number): string{
+    if(this.sliderIndex === indexParam){
+      return 'main'
+    }
+    if(this.sliderIndex === 3 && indexParam === 0){
+      return 'left';
+    }
+    if(this.sliderIndex === 4){
+      if(indexParam === 0 || indexParam === 1) {
+        return 'left'
+      }
+    }
+    if(indexParam > this.sliderIndex && indexParam <= this.sliderIndex + 2){
+      return 'left'
+    } else {
+      return 'right'
     }
   }
 }
