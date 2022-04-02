@@ -5,9 +5,8 @@
     *ngIf="bandMembers" [navigation]="true"
     [pagination]="{ clickable: true }"
   >
-
       <ng-template swiperSlide *ngFor="let bandMember; let index = index; of bandMembers" let-data>
-        <div class="swiper-slide"  [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + getImage(index)+ '.png' + ')'}">
+        <div class="swiper-slide"  [ngStyle]="{'background-image': 'url(' + bandMember.imgPath + 'main.png' + ')'}">
           <div class="content" [style.opacity]="sliderIndex === index ? '1' : '0'">
               <h1 class="inner-shadow-text">{{bandMember.name}}</h1>
               <div class="bio">{{bandMember.bio}}</div>

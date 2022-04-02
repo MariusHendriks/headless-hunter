@@ -68,23 +68,4 @@ export class SliderComponent {
       this.sliderIndex = 0;
     }
   }
-
-  getImage(indexParam:number): string{
-    if(this.sliderIndex === indexParam){
-      return 'main'
-    }
-    if(this.sliderIndex === 3 && indexParam === 0){
-      return 'left';
-    }
-    if(this.sliderIndex === 4){
-      if(indexParam === 0 || indexParam === 1) {
-        return 'left'
-      }
-    }
-    if(indexParam > this.sliderIndex && indexParam <= this.sliderIndex + 2){
-      return 'left'
-    } else {
-      return 'right'
-    }
-  }
 }
