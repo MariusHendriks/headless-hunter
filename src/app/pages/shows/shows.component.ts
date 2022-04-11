@@ -9,15 +9,6 @@ import { Show } from "../../models/models";
 export class ShowsComponent implements OnInit {
   shows: Show[] = [
     {
-      event: 'Metal Battle',
-      venue: 'Little Devil',
-      place: 'Tilburg',
-      country: 'Netherlands',
-      date: '08-04-2022',
-      linkToTickets: 'https://fb.me/e/2C6vCjHuF',
-      free: true
-    },
-    {
       event: 'Nephylim +DÆMORTHAN + Headless Hunter',
       venue: 'Willem 2',
       place: "s' Hertogenbosch",
