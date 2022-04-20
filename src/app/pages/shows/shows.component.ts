@@ -8,6 +8,15 @@ import { Show } from "../../models/models";
 })
 export class ShowsComponent implements OnInit {
   shows: Show[] = [
+     {
+      event: 'Battle 4 BOA',
+      venue: 'Baroeg',
+      place: 'Rotterdam',
+      country: 'Netherlands',
+      date: '30-04-2022',
+      linkToTickets: 'https://baroeg.stager.nl/web/tickets/111166741',
+      free: false
+    },
     {
       event: 'Nephylim +DÆMORTHAN + Headless Hunter',
       venue: 'Willem 2',
