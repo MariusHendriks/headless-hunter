@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +9,9 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 export class FooterComponent {
   faFacebook = faFacebook;
   faInstagram = faInstagram;
-  currentYear:number = new Date().getFullYear();
+  faYoutube = faYoutube;
+
+    currentYear:number = new Date().getFullYear();
   constructor() { }
 
   goToUrl(url: string): void {
