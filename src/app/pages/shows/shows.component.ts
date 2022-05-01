@@ -35,6 +35,15 @@ export class ShowsComponent implements OnInit {
       linkToTickets: 'https://www.facebook.com/events/248227777237431',
       free: true
     },
+    {
+      event: 'Changing Tides + Headless Hunter',
+      venue: 'Cafe Govers',
+      place: 'Geffen',
+      country: 'Netherlands',
+      date: '01-05-2022',
+      linkToTickets: 'https://www.facebook.com/events/248227777237431',
+      free: true
+    },
   ]
   constructor() { }
 
