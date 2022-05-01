@@ -8,17 +8,8 @@ import { Show } from "../../models/models";
 })
 export class ShowsComponent implements OnInit {
   shows: Show[] = [
-     {
-      event: 'Battle 4 BOA',
-      venue: 'Baroeg',
-      place: 'Rotterdam',
-      country: 'Netherlands',
-      date: '30-04-2022',
-      linkToTickets: 'https://baroeg.stager.nl/web/tickets/111166741',
-      free: false
-    },
     {
-      event: 'Nephylim +DÆMORTHAN + Headless Hunter',
+      event: 'Nephylim + DÆMORTHAN + Headless Hunter',
       venue: 'Willem 2',
       place: "s' Hertogenbosch",
       country: 'Netherlands',
@@ -41,6 +32,15 @@ export class ShowsComponent implements OnInit {
       place: 'Geffen',
       country: 'Netherlands',
       date: '01-10-2022',
+      linkToTickets: 'https://www.facebook.com/events/248227777237431',
+      free: true
+    },
+    {
+      event: 'Changing Tides + Headless Hunter',
+      venue: 'Cafe Govers',
+      place: 'Geffen',
+      country: 'Netherlands',
+      date: '01-05-2022',
       linkToTickets: 'https://www.facebook.com/events/248227777237431',
       free: true
     },
