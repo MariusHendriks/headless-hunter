@@ -9,15 +9,6 @@ import { Show } from "../../models/models";
 export class ShowsComponent implements OnInit {
   shows: Show[] = [
     {
-      event: 'Zaagmanz // Skatecafé',
-      venue: 'Hall of Fame',
-      place: 'Tilburg',
-      country: 'Netherlands',
-      date: '25-05-2022',
-      linkToTickets: 'https://www.facebook.com/events/527339242311296/?ref=newsfeed',
-      free: false
-    },
-    {
       event: 'Changing Tides + Headless Hunter',
       venue: 'Cafe Govers',
       place: 'Geffen',
