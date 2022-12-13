@@ -1,25 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { Show } from "../../models/models";
+import { ShowsService } from './shows.service';
 
 @Component({
   selector: 'app-shows',
   templateUrl: './shows.component.html',
-  styleUrls: ['./shows.component.scss']
+  styleUrls: ['./shows.component.scss'],
 })
 export class ShowsComponent implements OnInit {
-  shows: Show[] = [
-    {
-      event: 'Changing Tides + Headless Hunter',
-      venue: 'Cafe Govers',
-      place: 'Geffen',
-      country: 'Netherlands',
-      date: '01-10-2022',
-      linkToTickets: 'https://www.facebook.com/events/248227777237431',
-      free: true
-    },
-  ]
-  constructor() { }
+  shows: Show[] = [];
+  pastShows: Show[] = [];
+  today: Date = new Date();
+  constructor(private showService: ShowsService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.today.setHours(23, 59, 59, 998);
+    this.showService.getShows().subscribe((res: any) => {
+      console.log(res.results);
+      res.results.map((show: any) => {
+        const { date } = show.properties;
+        const pastShow: boolean = this.checkShowDate(date.date.start);
+        if (pastShow) {
+          this.pastShows.push(show.properties);
+        } else {
+          this.shows.push(show.properties);
+        }
+      });
+      console.log(this.shows[0]);
+    });
   }
+
+  checkShowDate = (date: Date): boolean => {
+    return new Date(date) < this.today;
+  };
 }

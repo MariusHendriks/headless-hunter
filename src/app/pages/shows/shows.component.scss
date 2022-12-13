@@ -26,6 +26,7 @@
     box-shadow: inset 0px 5px 6px -3px #111111;
     &:first-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) 0 0; }
     &:last-child{ border-radius: 0 0 calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
+    &:only-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
   }
 }
 

@@ -1,24 +1,24 @@
 <div class="show" *ngIf="show">
   <div class="details">
     <span class="venue">
-      <b>{{show.event}}</b>
+      <b>{{show.name.title[0].plain_text}}</b>
     </span>
     <span class="place-country">
 
-      <i>{{show.venue}}</i><br />
-      {{show.place}}, {{show.country}}
+      <i>{{show.venue.select.name}}</i><br />
+      {{show.city.select.name}}, {{show.country.select.name}}
     </span>
     <span class="date">
-      {{show.date}}
+      {{show.date.date.start}}
     </span>
   </div>
   <button
     type="button"
-    (click)="goToUrl(show.linkToTickets)"
+    (click)="goToUrl(show.link_to_event.url)"
     [disabled]="linkUnavailable"
     [ngClass]="linkUnavailable ? 'ticket-button unavailable' : 'ticket-button'"
   >
-    {{show.free ? "FREE!" : "Tickets"}}
+    {{show.free.checkbox ? "FREE!" : "Tickets"}}
     </button>
 </div>
 

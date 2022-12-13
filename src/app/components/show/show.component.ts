@@ -16,7 +16,7 @@ export class ShowComponent implements OnInit{
 
   ngOnInit(): void {
     if(this.show){
-      this.linkUnavailable = this.show.linkToTickets === '';
+      this.linkUnavailable = this.show.link_to_event.url === '';
     }
   }
 }
