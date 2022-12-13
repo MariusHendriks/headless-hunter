@@ -16,7 +16,6 @@ export class ShowsComponent implements OnInit {
   ngOnInit() {
     this.today.setHours(23, 59, 59, 998);
     this.showService.getShows().subscribe((res: any) => {
-      console.log(res.results);
       res.results.map((show: any) => {
         const { date } = show.properties;
         const pastShow: boolean = this.checkShowDate(date.date.start);
@@ -26,7 +25,6 @@ export class ShowsComponent implements OnInit {
           this.shows.push(show.properties);
         }
       });
-      console.log(this.shows[0]);
     });
   }
 
