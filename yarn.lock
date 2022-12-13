@@ -115,6 +115,13 @@
     "ora" "5.4.1"
     "rxjs" "6.6.7"
 
+"@angular/animations@^15.0.3", "@angular/animations@15.0.3":
+  "integrity" "sha512-kwUprQMjMvMawpyd5aLzW9DWLd7grlzm4ut4YIqXRf1UJm35KsTjwhvQWNj481u2gUjKxD2rBfkVakyzW5Na3A=="
+  "resolved" "https://registry.npmjs.org/@angular/animations/-/animations-15.0.3.tgz"
+  "version" "15.0.3"
+  dependencies:
+    "tslib" "^2.3.0"
+
 "@angular/cli@~15.0.3":
   "integrity" "sha512-xLmsSkGeTxkHYHmsThT3mnethXt3VN71e+lOGs+GobJb3R2Lh8FrU07bsr5at/ixaSC/Ejvvt9dhuwZonysDEQ=="
   "resolved" "https://registry.npmjs.org/@angular/cli/-/cli-15.0.3.tgz"
@@ -5610,10 +5617,10 @@
   "resolved" "https://registry.npmjs.org/typed-assert/-/typed-assert-1.0.8.tgz"
   "version" "1.0.8"
 
-"typescript@>=4.8.2 <4.9", "typescript@~4.5.2", "typescript@~4.8.2":
-  "integrity" "sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA=="
-  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.5.5.tgz"
-  "version" "4.5.5"
+"typescript@^4.8.2", "typescript@>=4.8.2 <4.9", "typescript@~4.8.2":
+  "integrity" "sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw=="
+  "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.8.2.tgz"
+  "version" "4.8.2"
 
 "ua-parser-js@^0.7.30":
   "integrity" "sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ=="
