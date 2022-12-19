@@ -2,7 +2,15 @@
   <div class="title-container" id="band">
     <app-title class="title" text="Images"></app-title>
   </div>
-  <div *ngFor="let url of imgUrls">
-    <img class="images" [src]="url"/>
+  <div class="image-wrapper">
+    <div *ngFor="let column of imgColumns; let i = index" [id]="i"  class="column">
+        <img
+        referrerpolicy="no-referrer"
+            *ngFor="let img of column"
+            class="image"
+            [style.order]="img.order"
+            [src]="img.url"
+        />
+    </div>
   </div>
 </section>

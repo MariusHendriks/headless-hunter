@@ -125,6 +125,7 @@ export interface Show {
 }
 
 
+
     export interface CreatedBy {
       object: string;
       id: string;
@@ -146,7 +147,25 @@ export interface Show {
       url: string;
     }
 
+    export interface Order {
+      id: string;
+      type: string;
+      number?: number;
+    }
+
     export interface Select {
+      id: string;
+      name: string;
+      color: string;
+    }
+
+    export interface What {
+      id: string;
+      type: string;
+      select: Select;
+    }
+
+    export interface Select2 {
       id: string;
       name: string;
       color: string;
@@ -155,7 +174,19 @@ export interface Show {
     export interface Status {
       id: string;
       type: string;
-      select: Select;
+      select: Select2;
+    }
+
+    export interface Select3 {
+      id: string;
+      name: string;
+      color: string;
+    }
+
+    export interface Row {
+      id: string;
+      type: string;
+      select: Select3;
     }
 
     export interface Text {
@@ -188,7 +219,10 @@ export interface Show {
 
     export interface Properties {
       url: Url;
+      order: Order;
+      what: What;
       status: Status;
+      row: Row;
       Name: Name;
     }
 
@@ -205,4 +239,31 @@ export interface Show {
       archived: boolean;
       properties: Properties;
       url: string;
+    }
+
+    export interface Page {}
+
+    export interface RootObject {
+      object: string;
+      results: RawImage[];
+      next_cursor?: any;
+      has_more: boolean;
+      type: string;
+      page: Page;
+    }
+
+    export interface ImageAndOrder {
+      url: string;
+      order?: number;
+    }
+
+    export interface Page {}
+
+    export interface RawImage2 {
+      object: string;
+      results: RawImage[];
+      next_cursor?: any;
+      has_more: boolean;
+      type: string;
+      page: Page;
     }
