@@ -1,47 +1,61 @@
-@import "/src/styles/styles";
+  @import "/src/styles/styles";
 
-.title-container{
-  margin-top: 70px;
-  margin-bottom: -50px;
-}
+  .title-container{
+    margin-top: 70px;
+    margin-bottom: -50px;
+  }
 
-.shows{
-  padding-top: 50px;
-  background-color: $black-lighter;
-  margin-top: -5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  .show-wrapper{
-    width: 90%;
-    background-color: $black;
-    color: $white;
+  .no-shows{
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 80px;
+    padding: 50px;
+    border-radius: calc(#{$borderRadius} / 2);
+    color: white;
+    background-color: $black-lighter;;
+    -webkit-box-shadow: inset 0px 0px 27px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 27px 3px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 27px 3px rgba(0,0,0,0.75);
+  }
+
+  .shows{
+    padding-top: 50px;
+    background-color: $black-lighter;
+    margin-top: -5px;
     display: flex;
-    line-height: 27px;
-    margin: 15px;
-    padding: 10px;
-    justify-content: space-between;
-    -webkit-box-shadow: inset 0px 5px 6px -3px #111111;
-    box-shadow: inset 0px 5px 6px -3px #111111;
-    &:first-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) 0 0; }
-    &:last-child{ border-radius: 0 0 calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
-    &:only-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .shows{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     .show-wrapper{
-      max-width: 1150px;
+      width: 90%;
+      background-color: $black;
+      color: $white;
+      display: flex;
+      line-height: 27px;
+      margin: 15px;
+      padding: 10px;
+      justify-content: space-between;
+      -webkit-box-shadow: inset 0px 5px 6px -3px #111111;
+      box-shadow: inset 0px 5px 6px -3px #111111;
+      &:first-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) 0 0; }
+      &:last-child{ border-radius: 0 0 calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
+      &:only-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
     }
   }
-}
 
-@media only screen and (min-width: 1700px) {
-  .shows{
-    .show-wrapper{
-      max-width: 1600px;
+  @media only screen and (min-width: 1200px) {
+    .shows{
+      .show-wrapper{
+        max-width: 1150px;
+      }
     }
   }
-}
+
+  @media only screen and (min-width: 1700px) {
+    .shows{
+      .show-wrapper{
+        max-width: 1600px;
+      }
+    }
+  }
