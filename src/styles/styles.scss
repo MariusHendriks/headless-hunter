@@ -46,6 +46,7 @@ $filter-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
 html{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 

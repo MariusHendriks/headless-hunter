@@ -1,24 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
-  activeClass: string = "home";
-  menuItems: string[] = ['home', 'band', ' ', 'shows', 'music'];
-  constructor() { }
+export class NavComponent {
+  activeClass: string = 'home';
+  menuItems: string[] = ['home', 'images', ' ', 'shows', 'music'];
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
-  setActiveClass(menuItem: string){
+  setActiveClass(menuItem: string) {
     this.activeClass = menuItem;
   }
 
   scrollIntoView(elem: string) {
     // @ts-ignore
-    document.querySelector("#" + elem).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document
+      .querySelector('#' + elem)
+      .scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
