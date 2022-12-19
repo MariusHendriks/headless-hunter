@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class ShowsService {
+export class ImagesService {
   constructor(private http: HttpClient) {}
 
-  getShows() {
-    return this.http.get('/api/fetchShows');
+  getImages() {
+    return this.http.get('/api/fetchImages');
   }
 }

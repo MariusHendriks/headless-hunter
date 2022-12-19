@@ -123,3 +123,86 @@ export interface Show {
   city: City;
   name: Name;
 }
+
+
+    export interface CreatedBy {
+      object: string;
+      id: string;
+    }
+
+    export interface LastEditedBy {
+      object: string;
+      id: string;
+    }
+
+    export interface Parent {
+      type: string;
+      database_id: string;
+    }
+
+    export interface Url {
+      id: string;
+      type: string;
+      url: string;
+    }
+
+    export interface Select {
+      id: string;
+      name: string;
+      color: string;
+    }
+
+    export interface Status {
+      id: string;
+      type: string;
+      select: Select;
+    }
+
+    export interface Text {
+      content: string;
+      link?: any;
+    }
+
+    export interface Annotations {
+      bold: boolean;
+      italic: boolean;
+      strikethrough: boolean;
+      underline: boolean;
+      code: boolean;
+      color: string;
+    }
+
+    export interface Title {
+      type: string;
+      text: Text;
+      annotations: Annotations;
+      plain_text: string;
+      href?: any;
+    }
+
+    export interface Name {
+      id: string;
+      type: string;
+      title: Title[];
+    }
+
+    export interface Properties {
+      url: Url;
+      status: Status;
+      Name: Name;
+    }
+
+    export interface RawImage {
+      object: string;
+      id: string;
+      created_time: Date;
+      last_edited_time: Date;
+      created_by: CreatedBy;
+      last_edited_by: LastEditedBy;
+      cover?: any;
+      icon?: any;
+      parent: Parent;
+      archived: boolean;
+      properties: Properties;
+      url: string;
+    }

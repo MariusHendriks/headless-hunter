@@ -1,0 +1,8 @@
+<section class="images-container">
+  <div class="title-container" id="band">
+    <app-title class="title" text="Images"></app-title>
+  </div>
+  <div *ngFor="let url of imgUrls">
+    <img class="images" [src]="url"/>
+  </div>
+</section>

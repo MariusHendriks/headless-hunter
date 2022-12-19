@@ -16,6 +16,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleComponent } from './components/title/title.component';
 import { MusicComponent } from './pages/music/music.component';
+import { ImagesComponent } from './pages/images/images.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MusicComponent } from './pages/music/music.component';
     SliderComponent,
     TitleComponent,
     MusicComponent,
+    ImagesComponent,
   ],
   imports: [
     BrowserModule,
