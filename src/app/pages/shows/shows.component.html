@@ -1,7 +1,7 @@
 <div class="title-container" id="shows">
   <app-title text="Shows"></app-title>
 </div>
-<section class="shows" *ngIf="shows.length < 0 else noShows">
+<section class="shows" *ngIf="shows.length > 0 else noShows">
   <app-show
     *ngFor="let show of shows; let i = index"
     [attr.data-index]="i"
