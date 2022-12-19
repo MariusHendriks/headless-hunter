@@ -1,7 +1,7 @@
 <div class="title-container" id="shows">
   <app-title text="Shows"></app-title>
 </div>
-<section class="shows">
+<section class="shows" *ngIf="shows.length < 0 else noShows">
   <app-show
     *ngFor="let show of shows; let i = index"
     [attr.data-index]="i"
@@ -9,3 +9,8 @@
     class="show-wrapper"
   ></app-show>
 </section>
+<ng-template #noShows>
+  <div class="no-shows">
+    Either something went wrong or there are no shows planned :(
+  </div>
+</ng-template>
