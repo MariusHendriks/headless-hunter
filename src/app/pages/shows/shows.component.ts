@@ -10,19 +10,22 @@ import { ShowsService } from './shows.service';
 export class ShowsComponent implements OnInit {
     shows: Show[] = [];
     pastShows: Show[] = [];
-    today: Date = new Date();
+    
     constructor(private showService: ShowsService) { }
 
     ngOnInit() {
-        this.today.setHours(23, 59, 59, 998);
         this.showService.getShows().subscribe((res: any) => {
             res.results.map((show: any) => {
-                const { date } = show.properties;
-                const pastShow: boolean = this.checkShowDate(date.date.start);
-                if (pastShow) {
-                    this.pastShows.push(show.properties);
-                } else {
+                const { date } = show.properties.date;
+                if (this.isToday(new Date(date.start))) {
+                    show.properties.isToday = true
+                }
+
+                const futureShow: boolean = this.isPastShow(new Date(date.start));
+                if (futureShow) {
                     this.shows.push(show.properties);
+                } else {
+                    this.pastShows.push(show.properties);
                 }
             })
             this.shows.sort((a, b) => {
@@ -31,7 +34,23 @@ export class ShowsComponent implements OnInit {
         });
     }
 
-    checkShowDate = (date: Date): boolean => {
-        return new Date(date) < this.today;
-    };
+    isPastShow = (date: Date): boolean => {
+        const today = new Date();
+        const dateYear = date.getFullYear();
+        const dateMonth = date.getMonth();
+        const dateDay = date.getDate();
+        const todayYear = today.getFullYear();
+        const todayMonth = today.getMonth();
+        const todayDay = today.getDate();
+        return dateYear > todayYear ||
+            (dateYear === todayYear && dateMonth > todayMonth) ||
+            (dateYear === todayYear && dateMonth === todayMonth && dateDay >= todayDay);
+    }
+
+    isToday = (date: Date) => {
+        const today = new Date()
+        return date.getDate() == today.getDate() &&
+            date.getMonth() == today.getMonth() &&
+            date.getFullYear() == today.getFullYear()
+    }
 }

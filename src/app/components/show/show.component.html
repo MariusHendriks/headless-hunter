@@ -4,12 +4,11 @@
       <b>{{show.name.title[0].plain_text}}</b>
     </span>
     <span class="place-country">
-
       <i>{{show.venue.select.name}}</i><br />
       {{show.city.select.name}}, {{show.country.select.name}}
     </span>
-    <span class="date">
-      {{show.date.date.start | date }}
+    <span class="date"  [ngClass]="{'show-is-today-text': show.isToday}">
+        {{ show.isToday ? "TODAY" : show.date.date.start | date }}
     </span>
   </div>
   <button

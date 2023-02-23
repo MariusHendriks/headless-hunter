@@ -122,6 +122,7 @@ export interface Show {
     city: City;
     name: Name;
     link_to_photos?: LinkToPhotos;
+    isToday: boolean
 }
 
 
