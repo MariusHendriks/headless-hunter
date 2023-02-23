@@ -113,15 +113,15 @@ export interface Name {
 }
 
 export interface Show {
-  link_to_photos: LinkToPhotos;
-  free: Free;
-  status: Status;
-  date: Date;
-  venue: Venue;
-  link_to_event: LinkToEvent;
-  country: Country;
-  city: City;
-  name: Name;
+    free: Free;
+    status: Status;
+    date: Date;
+    venue: Venue;
+    link_to_event: LinkToEvent;
+    country: Country;
+    city: City;
+    name: Name;
+    link_to_photos?: LinkToPhotos;
 }
 
 
