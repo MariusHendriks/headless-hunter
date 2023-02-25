@@ -1,20 +1,25 @@
-.music{
-  padding-top: 100px;
-  display: flex;
-  justify-content: center;
-  width:100%;
-  align-items: center;
-  flex-direction: column;
-  .soundcloud-container{
-    box-shadow: 1px 1px 6px 3px #000000;
-    background-color: white;
-  }
+.music {
+  	padding-top: 100px;
+  	display: flex;
+
+  	justify-content: center;
+  	width:100%;
+  	align-items: center;
+  	flex-direction: column;
+
+  	.spotify-container {
+		width: 95%;
+        margin-top: 15px;
+		box-shadow: 1px 1px 6px 3px #000000;
+        border-radius: 12px;
+        height: 352px; //make sure its the same as music.component.html's height
+  	}
 }
 
 @media only screen and (min-width: 480px) {
-  .soundcloud-container{
-    width: 93%;
-  }
+  	.soundcloud-container{
+		width: 93%;
+  	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -24,14 +29,18 @@
 
 }
 
-@media only screen and (min-width: 1200px) {
-  .soundcloud-container{
-      width: 1150px;
+  @media only screen and (min-width: 1200px) {
+    .music{
+      .spotify-container{
+        max-width: 1150px;
+      }
+    }
   }
-}
-@media only screen and (min-width: 1700px) {
-  .soundcloud-container{
-      width: 1600px;
-  }
-}
 
+  @media only screen and (min-width: 1700px) {
+    .music{
+      .spotify-container{
+        max-width: 1600px;
+      }
+    }
+  }
