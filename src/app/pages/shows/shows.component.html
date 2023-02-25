@@ -1,17 +1,54 @@
 <div class="title-container" id="shows">
   <app-title text="Shows"></app-title>
+  <div
+    class="future-past-container"
+    *ngIf="shows.length > 0 && pastShows.length > 0"
+  >
+    <div
+      class="button future"
+      [ngClass]="{ active: currentShowsActive }"
+      (click)="currentShowsActive = true"
+    >
+      future
+    </div>
+    <div
+      class="button past"
+      [ngClass]="{ active: !currentShowsActive }"
+      (click)="currentShowsActive = false"
+    >
+      past
+    </div>
+  </div>
 </div>
-<section class="shows" *ngIf="shows.length > 0 else noShows">
-  <app-show
-    *ngFor="let show of shows; let i = index"
-    [attr.data-index]="i"
-    [show]="show"
-    class="show-wrapper"
-    [ngClass]="{ 'show-is-today': show.isToday }"
-  ></app-show>
-</section>
-<div class="more-shows-container">
-    <h1 class="depth" title="More to be announced soon...">More to be announced soon...</h1>
+<div *ngIf="shows.length > 0 && pastShows.length > 0; else noShows">
+  <section class="shows" *ngIf="currentShowsActive; else pastShowsTemplate">
+    <app-show
+      *ngFor="let show of shows; let i = index"
+      [attr.data-index]="i"
+      [show]="show"
+      [isPastShow]="false"
+      class="show-wrapper"
+      [ngClass]="{ 'show-is-today': show.isToday }"
+    ></app-show>
+  </section>
+  <div class="more-shows-container" *ngIf="currentShowsActive">
+    <h1 class="depth" title="More to be announced soon...">
+      More to be announced soon...
+    </h1>
+  </div>
+  <div></div>
+
+  <ng-template #pastShowsTemplate>
+    <section class="shows">
+      <app-show
+        *ngFor="let show of pastShows; let i = index"
+        [attr.data-index]="i"
+        [show]="show"
+        [isPastShow]="true"
+        class="show-wrapper"
+      ></app-show>
+    </section>
+  </ng-template>
 </div>
 
 <ng-template #noShows>

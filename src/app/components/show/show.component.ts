@@ -1,22 +1,33 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Show } from "../../models/models";
 @Component({
-  selector: 'app-show',
-  templateUrl: './show.component.html',
-  styleUrls: ['./show.component.scss']
+    selector: 'app-show',
+    templateUrl: './show.component.html',
+    styleUrls: ['./show.component.scss']
 })
-export class ShowComponent implements OnInit{
-  @Input() show?: Show;
-  clientWidth: number = document.body.clientWidth;
-  linkUnavailable: boolean = false;
+export class ShowComponent implements OnInit {
+    @Input() show?: Show;
+    @Input() isPastShow?: Boolean;
+    clientWidth: number = document.body.clientWidth;
+    hasShowLink: boolean = false;
+    hasImageLink: boolean = false;
 
-  goToUrl(url: string): void {
-    !this.linkUnavailable ? window.open(url, "_blank") : null
-  }
-
-  ngOnInit(): void {
-    if(this.show){
-      this.linkUnavailable = this.show.link_to_event.url === '';
+    getImageUrl(): string {
+        if (this.isPastShow) {
+            return this.show?.link_to_photos?.url
+        } else {
+            return this.show?.link_to_event.url || ""
+        }
     }
-  }
+
+    goToUrl(url: string): void {
+        window.open(url, "_blank")
+    }
+
+    ngOnInit(): void {
+        if (this.show) {
+            this.hasShowLink = this.show.link_to_event.url !== null;
+            this.hasImageLink = this.show.link_to_photos?.url !== null;
+        }
+    }
 }

@@ -32,3 +32,22 @@ $toColor: #00A100;
     box-shadow: inset 0px 0px 20px 10px $fromColor;
   }
 }
+
+@keyframes shadows {
+  0% {
+    text-shadow: $fromColor 0 0 2.5px;
+    box-shadow: 0px 0px 5px 2.5px $fromColor;
+  }
+  50% {
+    text-shadow:$toColor 0 0 2.5px;
+    box-shadow: 0px 0px 5px 2.5px $toColor;
+  }
+  75% {
+    text-shadow: $toColor 0 0 2.5px;
+    box-shadow: 0px 0px 5px 2.5px $toColor;
+  }
+  100% {
+    text-shadow: $fromColor 0 0 2.5px;
+    box-shadow: 0px 0px 5px 2.5px $fromColor;
+  }
+}

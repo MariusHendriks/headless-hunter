@@ -10,12 +10,13 @@ import { ShowsService } from './shows.service';
 export class ShowsComponent implements OnInit {
     shows: Show[] = [];
     pastShows: Show[] = [];
+    currentShowsActive: boolean = true
     
     constructor(private showService: ShowsService) { }
 
     ngOnInit() {
         this.showService.getShows().subscribe((res: any) => {
-            res.results.map((show: any) => {
+            res.map((show: any) => {
                 const { date } = show.properties.date;
                 if (this.isToday(new Date(date.start))) {
                     show.properties.isToday = true

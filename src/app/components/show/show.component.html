@@ -19,12 +19,27 @@
       {{ show.date.date.start | date }}
     </ng-template>
   </div>
-  <button
-    type="button"
-    (click)="goToUrl(show.link_to_event.url)"
-    [disabled]="linkUnavailable"
-    [ngClass]="linkUnavailable ? 'ticket-button unavailable' : 'ticket-button'"
-  >
-    {{ show.free.checkbox ? "FREE!" : "Tickets" }}
-  </button>
+  <div *ngIf="!isPastShow else pastShowButton">
+    <button
+        type="button"
+        *ngIf="hasShowLink"
+        (click)="goToUrl(getImageUrl())"
+        class="ticket-button"
+    >
+        {{ this.show.free ? "FREE" : "Tickets" }}
+    </button>
+  </div>
+
+  <ng-template #pastShowButton>
+        <div *ngIf="hasImageLink">
+            <button
+                type="button"
+                *ngIf="isPastShow"
+                (click)="goToUrl(getImageUrl())"
+                [ngClass]="hasImageLink ? 'ticket-button' : 'ticket-button unavailable'"
+            >
+                Photos
+            </button>
+        </div>
+  </ng-template>
 </div>

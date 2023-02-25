@@ -6,8 +6,9 @@ const notion = new Client({
 });
 
 exports.handler = async function (event, context) {
+  let results = [];
   try {
-    const response = await notion.databases.query({
+    const data = await notion.databases.query({
       database_id: NOTION_SHOW_DB,
       filter: {
         property: "status",
@@ -16,9 +17,26 @@ exports.handler = async function (event, context) {
         },
       },
     });
+
+    results = [...data.results];
+
+    while (data.has_more) {
+      data = await notion.databases.query({
+        database_id: process.env.DATABASE_ID,
+        filter: {
+          property: "status",
+          select: {
+            equals: "PUBLIC",
+          },
+        },
+        start_cursor: data.next_cursor,
+      });
+
+      results = [...results, ...data.results];
+    }
     return {
       statusCode: 200,
-      body: JSON.stringify(response),
+      body: JSON.stringify(results),
     };
   } catch (e) {
     console.log(e);

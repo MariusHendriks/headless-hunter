@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class ShowsService {
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
-  getShows() {
-    return this.http.get('/api/fetchShows');
-  }
+    getShows() {
+        const data = this.http.get('/api/fetchShows');
+        return data
+    }
 }
