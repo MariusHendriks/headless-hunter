@@ -1,4 +1,5 @@
   @import "/src/styles/styles";
+  @import "/src/styles/animations/glow";
 
   .title-container{
     margin-top: 70px;
@@ -29,6 +30,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+
     .show-wrapper{
       width: 90%;
       background-color: $black;
@@ -43,6 +45,11 @@
       &:first-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) 0 0; }
       &:last-child{ border-radius: 0 0 calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
       &:only-child{ border-radius: calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2) calc(#{$borderRadius} / 2); }
+    }
+
+    .show-is-today{
+        box-shadow: inset 0px 0px 20px 10px $fromColor;
+        animation: shadowsInset 1.5s infinite;
     }
   }
 

@@ -13,3 +13,22 @@ $toColor: #00A100;
     text-shadow: 0 0 $fromSize $toColor, 0 0 calc(#{$fromSize} * 2) $toColor, 0 0 calc(#{$fromSize} * 3) $toColor, 0 0 calc(#{$fromSize} * 4) $toColor, 0 0 calc(#{$fromSize} * 5) $toColor, 0 0 calc(#{$fromSize} * 6)$toColor;
   }
 }
+
+@keyframes shadowsInset {
+  0% {
+    text-shadow: $fromColor 0 0 10px;
+    box-shadow: inset 0px 0px 20px 10px $fromColor;
+  }
+  50% {
+    text-shadow:$toColor 0 0 10px;
+    box-shadow: inset 0px 0px 20px 10px $toColor;
+  }
+  75% {
+    text-shadow: $toColor 0 0 10px;
+    box-shadow: inset 0px 0px 20px 10px $toColor;
+  }
+  100% {
+    text-shadow: $fromColor 0 0 10px;
+    box-shadow: inset 0px 0px 20px 10px $fromColor;
+  }
+}

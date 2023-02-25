@@ -1,15 +1,23 @@
 <div class="show" *ngIf="show">
   <div class="details">
     <span class="venue">
-      <b>{{show.name.title[0].plain_text}}</b>
+      <b>{{ show.name.title[0].plain_text }}</b>
     </span>
     <span class="place-country">
-      <i>{{show.venue.select.name}}</i><br />
-      {{show.city.select.name}}, {{show.country.select.name}}
+      <i>{{ show.venue.select.name }}</i
+      ><br />
+      {{ show.city.select.name }}, {{ show.country.select.name }}
     </span>
-    <span class="date"  [ngClass]="{'show-is-today-text': show.isToday}">
-        {{ show.isToday ? "TODAY" : show.date.date.start | date }}
+    <span
+      class="date"
+      *ngIf="show.isToday; else notToday"
+      class="show-is-today-text"
+    >
+      <b>TODAY!</b>
     </span>
+    <ng-template #notToday>
+      {{ show.date.date.start | date }}
+    </ng-template>
   </div>
   <button
     type="button"
@@ -17,7 +25,6 @@
     [disabled]="linkUnavailable"
     [ngClass]="linkUnavailable ? 'ticket-button unavailable' : 'ticket-button'"
   >
-    {{show.free.checkbox ? "FREE!" : "Tickets"}}
-    </button>
+    {{ show.free.checkbox ? "FREE!" : "Tickets" }}
+  </button>
 </div>
-
