@@ -32,6 +32,10 @@ export class ShowsComponent implements OnInit {
             this.shows.sort((a, b) => {
                 return new Date(a.date.date.start).valueOf() - new Date(b.date.date.start).valueOf()
             })
+
+            this.pastShows.sort((a, b) => {
+                return new Date(b.date.date.start).valueOf() - new Date(a.date.date.start).valueOf()
+            })
         });
     }
 
