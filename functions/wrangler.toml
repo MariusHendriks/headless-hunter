@@ -1,4 +1,4 @@
-name = "broken-band-6896"
+name = "functions"
 main = "src/index.ts"
 compatibility_date = "2023-10-10"
 
