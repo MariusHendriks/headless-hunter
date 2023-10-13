@@ -8,7 +8,6 @@ export class ShowsService {
     constructor(private http: HttpClient) { }
 
     getShows() {
-        const data = this.http.get('/api/fetchShows');
-        return data
+      return this.http.get('/api/fetchShows');
     }
 }
