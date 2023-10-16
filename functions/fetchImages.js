@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {
   } catch (e) {
     console.log(e);
     return {
-      statuscode: 500,
+      statusCode: 500,
       body: "Something went wrong... Notify us if this annoys you",
     };
   }
