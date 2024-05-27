@@ -4,53 +4,65 @@ $wrapperWidth: 1200px;
 $borderRadius: 30px;
 
 //Colors
-$white: #DCDCDC;
+$white: #dcdcdc;
 $black: #232323;
-$black-lighter: #2E2E2E;
-$green: #00F000;
-$orange: #FF7000;
-:host{
-  --swiper-theme-color: #FF7000;
-  --swiper-navigation-color: #FF7000;
+$black-lighter: #2e2e2e;
+$green: #00f000;
+$orange: #ff7000;
+:host {
+  --swiper-theme-color: #ff7000;
+  --swiper-navigation-color: #ff7000;
 }
 
 $filter-shadow: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
 
 /* montserrat-regular - latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   src: url(../assets/fonts/montserrat-v23-latin-regular.eot); /* IE9 Compat Modes */
-  src: local(''),
-  url(../assets/fonts/montserrat-v23-latin-regular.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
-  url(../assets/fonts/montserrat-v23-latin-regular.woff2) format('woff2'), /* Super Modern Browsers */
-  url(../assets/fonts/montserrat-v23-latin-regular.woff) format('woff'), /* Modern Browsers */
-  url(../assets/fonts/montserrat-v23-latin-regular.ttf) format('truetype'), /* Safari, Android, iOS */
-  url(../assets/fonts/montserrat-v23-latin-regular.svg#Montserrat) format('svg'); /* Legacy iOS */
+  src: local(""),
+    url(../assets/fonts/montserrat-v23-latin-regular.eot?#iefix)
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url(../assets/fonts/montserrat-v23-latin-regular.woff2)
+      format("woff2"),
+    /* Super Modern Browsers */
+      url(../assets/fonts/montserrat-v23-latin-regular.woff) format("woff"),
+    /* Modern Browsers */ url(../assets/fonts/montserrat-v23-latin-regular.ttf)
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url(../assets/fonts/montserrat-v23-latin-regular.svg#Montserrat)
+      format("svg"); /* Legacy iOS */
 }
 /* montserrat-900 - latin */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 900;
-  src: url('../assets/fonts/montserrat-v23-latin-900.eot'); /* IE9 Compat Modes */
-  src: local(''),
-  url('../assets/fonts/montserrat-v23-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../assets/fonts/montserrat-v23-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../assets/fonts/montserrat-v23-latin-900.woff') format('woff'), /* Modern Browsers */
-  url('../assets/fonts/montserrat-v23-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../assets/fonts/montserrat-v23-latin-900.svg#Montserrat') format('svg'); /* Legacy iOS */
+  src: url("../assets/fonts/montserrat-v23-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/montserrat-v23-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/montserrat-v23-latin-900.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../assets/fonts/montserrat-v23-latin-900.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/montserrat-v23-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/montserrat-v23-latin-900.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
 }
 
-html{
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
 
-body{
+body {
   font-family: Montserrat, serif;
   background-color: $black-lighter;
   overflow-x: hidden;
@@ -58,23 +70,39 @@ body{
   padding: 0;
 }
 
-
-.inner-shadow-text{
+.inner-shadow-text {
   color: #ffffff;
   position: relative;
   text-align: center;
-  &:before, &:after {
+  &:before,
+  &:after {
     width: 100%;
     content: attr(title);
-    color: rgba(0,0,0,.1);
+    color: rgba(0, 0, 0, 0.1);
     position: absolute;
   }
   &:before {
     top: 0.5px;
-    left: 0.5px
-  };
+    left: 0.5px;
+  }
   &:after {
     top: 1px;
-    left: 1px
-  };
+    left: 1px;
+  }
+}
+
+.no-shows {
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 80px;
+  padding: 50px;
+  border-radius: calc(#{$borderRadius} / 2);
+  color: white;
+  background-color: $black-lighter;
+  -webkit-box-shadow: inset 0px 0px 27px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 27px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 27px 3px rgba(0, 0, 0, 0.75);
+  max-width: 70vw;
+  line-height: 1.5;
 }

@@ -2,15 +2,24 @@
   <div class="title-container" id="images">
     <app-title class="title" text="Images"></app-title>
   </div>
-  <div class="image-wrapper">
-    <div *ngFor="let column of imgColumns; let i = index" [id]="i"  class="column">
-        <img
+
+  <div class="image-wrapper" *ngIf="!loading; else loadingImages">
+    <div
+      *ngFor="let column of imgColumns; let i = index"
+      [id]="i"
+      class="column"
+    >
+      <img
         referrerpolicy="no-referrer"
-            *ngFor="let img of column"
-            class="image"
-            [style.order]="img.order"
-            [src]="img.url"
-        />
+        *ngFor="let img of column"
+        class="image"
+        [style.order]="img.order"
+        [src]="img.url"
+      />
     </div>
   </div>
 </section>
+
+<ng-template #loadingImages>
+  <div class="no-shows">Loading images....</div>
+</ng-template>

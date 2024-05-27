@@ -1,15 +1,13 @@
-
-$imageGap: 15px; 
+$imageGap: 15px;
 
 .image-wrapper {
   max-width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  width: 95%;
+  width: 65%;
   margin: 20px auto 0 auto;
 }
 
-/* Create four equal columns that sits next to each other */
 .column {
   -ms-flex: 25%; /* IE10 */
   flex: 25%;
@@ -18,20 +16,20 @@ $imageGap: 15px;
   flex-direction: column;
 }
 
-.image{
-    margin-bottom: $imageGap;
-    box-shadow: inset 0 5px 6px -3px #111111;
-    width: calc(100% - #{$imageGap});
-    vertical-align: middle;
-    flex-grow: 3;
+.image {
+  margin-bottom: $imageGap;
+  box-shadow: inset 0 5px 6px -3px #111111;
+  width: calc(100% - #{$imageGap});
+  vertical-align: middle;
+  flex-grow: 3;
 }
-/* Responsive layout - makes a two column-layout instead of four columns */
+
 @media screen and (max-width: 800px) {
-    .images-container{
-        display: none;
-    }
+  .images-container {
+    display: none;
+  }
 }
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
@@ -41,25 +39,25 @@ $imageGap: 15px;
 }
 
 @media only screen and (min-width: 768px) {
-  .images-container{
+  .images-container {
     box-shadow: inset 0 5px 6px -3px #111111;
   }
 
-  .title-container{
+  .title-container {
     padding-top: 30px;
     margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .title-container{
+  .title-container {
     padding-top: 80px;
     margin-bottom: 0px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .title-container{
+  .title-container {
     padding-top: 80px;
   }
 }

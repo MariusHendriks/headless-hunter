@@ -1,18 +1,35 @@
 <div class="footer-container">
   <div class="footer">
-    <div>
-      © Headless Hunter {{currentYear}}
-    </div>
+    <div>© Headless Hunter {{ currentYear }}</div>
     <div class="divider"></div>
     <div class="management">
-      Management and bookings:<br /> <a href="mailto:headlesshunterofficial@gmail.com">headlesshunterofficial@gmail.com</a> <br />
-      You can check out our rider <a href="/assets/files/rider-stageplan.pdf" target="_blank">here</a>!
+      Management and bookings:<br />
+      <a href="mailto:headlesshunterofficial@gmail.com"
+        >headlesshunterofficial@gmail.com</a
+      >
+      <br />
+      You can check out our EPK
+      <a href="/assets/files/epk.pdf" target="_blank">here</a>!
     </div>
     <div class="divider"></div>
     <div class="socials">
-      <fa-icon (click)="goToUrl('https://www.facebook.com/headlesshunterofficial')" class="icon" [icon]="faFacebook"></fa-icon>
-      <fa-icon (click)="goToUrl('https://www.instagram.com/headlesshunterofficial/')" class="icon" [icon]="faInstagram"></fa-icon>
-      <fa-icon (click)="goToUrl('https://www.youtube.com/channel/UCfWmOjPSv84TgEKnCqRJtrQ')" class="icon" [icon]="faYoutube"></fa-icon>
+      <fa-icon
+        (click)="goToUrl('https://www.facebook.com/headlesshunterofficial')"
+        class="icon"
+        [icon]="faFacebook"
+      ></fa-icon>
+      <fa-icon
+        (click)="goToUrl('https://www.instagram.com/headlesshunterofficial/')"
+        class="icon"
+        [icon]="faInstagram"
+      ></fa-icon>
+      <fa-icon
+        (click)="
+          goToUrl('https://www.youtube.com/channel/UCfWmOjPSv84TgEKnCqRJtrQ')
+        "
+        class="icon"
+        [icon]="faYoutube"
+      ></fa-icon>
     </div>
   </div>
 </div>
