@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleComponent } from './components/title/title.component';
 import { MusicComponent } from './pages/music/music.component';
 import { ImagesComponent } from './pages/images/images.component';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ImagesComponent } from './pages/images/images.component';
     TitleComponent,
     MusicComponent,
     ImagesComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,
